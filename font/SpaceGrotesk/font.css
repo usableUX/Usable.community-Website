@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("./SpaceGrotesk-Bold.woff2") format("woff2"),
+  url("./SpaceGrotesk-Bold.woff") format("woff"),
+  url("./SpaceGrotesk-Bold.otf") format("truetype");
+  font-style: normal;
+  font-weight: 700; }
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("./SpaceGrotesk-SemiBold.woff2") format("woff2"),
+  url("./SpaceGrotesk-SemiBold.woff") format("woff"),
+  url("./SpaceGrotesk-SemiBold.otf") format("truetype");
+  font-style: normal;
+  font-weight: 600; }
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("./SpaceGrotesk-Medium.woff2") format("woff2"),
+  url("./SpaceGrotesk-Medium.woff") format("woff"),
+  url("./SpaceGrotesk-Medium.otf") format("truetype");
+  font-style: normal;
+  font-weight: 500; }
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("./SpaceGrotesk-Regular.woff2") format("woff2"),
+  url("./SpaceGrotesk-Regular.woff") format("woff"),
+  url("./SpaceGrotesk-Regular.otf") format("truetype");
+  font-style: normal;
+  font-weight: 400; }
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("./SpaceGrotesk-Light.woff2") format("woff2"),
+  url("./SpaceGrotesk-Light.woff") format("woff"),
+  url("./SpaceGrotesk-Light.otf") format("truetype");
+  font-style: normal;
+  font-weight: 200; }
+
+*,*:before,*:after {
+  text-Rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased; }

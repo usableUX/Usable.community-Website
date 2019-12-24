@@ -1,1 +1,127 @@
 @import "./header.scss";
+
+// [GLOBAL STYLES]
+
+.container {
+    max-width: 1344px;
+}
+
+// [Header]
+.header {
+    padding: 16px 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    &__navigation {
+        text-align: right;
+        font-size: 14px;
+
+        ul {
+            li {
+                display: inline-block;
+                margin-right: 24px;
+                &:last-child{
+                    margin: 0;
+                }
+
+                a {
+                    display: block;
+                }
+            }
+
+        }
+    }
+}
+
+
+/***
+[Typography]
+**/
+
+
+/**
+[UTILITY]
+**/
+
+// -- Grid
+
+.welcome {
+    padding: 16rem 0 4rem 0;
+    border-bottom: 1px solid red;
+}
+
+
+.blown {
+    padding: 8rem 0 4rem 0;
+    //background: #fbff47;
+    .class-captain {
+        font-size: 4rem;
+        margin-bottom: 8rem;
+    }
+}
+
+.numbers {
+    margin-top: 2rem;
+
+    h4 {
+        margin: 1rem 0 1rem 0;
+
+    }
+    &__block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &__entry {
+            width: 48%;
+            margin-bottom: 4%;
+
+        }
+
+    }
+
+    &__digit {
+        font-size: 2.4rem;
+        font-weight: 600;
+    }
+    &__label {
+        display: block;
+        font-size: 14px;
+
+    }
+}
+
+.welcome {
+
+    &__grid {
+        display: grid;
+        position: relative; // imperative for the overlapping to work
+        grid-template-columns: repeat(12, 1fr);
+
+        &__image--top {
+            grid-row: 1;
+            grid-column: 1 / span 11;
+            z-index: 1; // tells the browser to make this image on top
+        }
+        &__image--bottom {
+            grid-column: 6 / -1;
+            grid-row: 1;
+            height: 400px;
+            background: #0373FF;
+            margin-top: -4rem;
+            background-image: url("data:image/svg+xml,***<here place encoded svg>***");
+            background-repeat: no-repeat;
+        }
+
+    }
+    // &__testimonial {
+    //     border:1px solid;
+    //
+    //     h4 {
+    //         font-size: 1rem;
+    //         text-transform: uppercase;
+    //     }
+    // }
+}
