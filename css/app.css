@@ -403,10 +403,11 @@ body {
   width: 100%; }
   .header__navigation {
     text-align: right;
-    font-size: 14px; }
+    font-size: 14px;
+    text-transform: uppercase; }
     .header__navigation ul li {
       display: inline-block;
-      margin-right: 24px; }
+      margin-right: 3rem; }
       .header__navigation ul li:last-child {
         margin: 0; }
       .header__navigation ul li a {
@@ -423,9 +424,9 @@ body {
   border-bottom: 1px solid red; }
 
 .blown {
-  padding: 8rem 0 4rem 0; }
+  padding: 10rem 0 8rem 0; }
   .blown .class-captain {
-    font-size: 4rem;
+    font-size: 6rem;
     margin-bottom: 8rem; }
 
 .numbers {
@@ -464,4 +465,37 @@ body {
     margin-top: -4rem;
     background-image: url("data:image/svg+xml,***<here place encoded svg>***");
     background-repeat: no-repeat; }
+
+.parent__engagement .row > .col-sm-4 {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap; }
+
+.engagement {
+  border: 1px solid; }
+  .engagement__photo {
+    height: 300px;
+    position: relative;
+    overflow: hidden; }
+    .engagement__photo__underlay {
+      border: 1px solid red;
+      height: 100%;
+      width: 100%;
+      border-radius: 120px;
+      -webkit-transform: translate(50%, -120px) rotateZ(45deg);
+              transform: translate(50%, -120px) rotateZ(45deg); }
+      .engagement__photo__underlay--pink {
+        background: red; }
+  .engagement__content {
+    padding: 1rem; }
+    .engagement__content h3 {
+      margin: 0; }
+  .engagement__action {
+    border: 1px solid red;
+    padding: 1rem;
+    background: #3a2dbd;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between; }
 /*# sourceMappingURL=app.css.map */

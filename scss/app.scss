@@ -17,11 +17,12 @@
     &__navigation {
         text-align: right;
         font-size: 14px;
+        text-transform: uppercase;
 
         ul {
             li {
                 display: inline-block;
-                margin-right: 24px;
+                margin-right: 3rem;
                 &:last-child{
                     margin: 0;
                 }
@@ -54,10 +55,10 @@
 
 
 .blown {
-    padding: 8rem 0 4rem 0;
+    padding: 10rem 0 8rem 0;
     //background: #fbff47;
     .class-captain {
-        font-size: 4rem;
+        font-size: 6rem;
         margin-bottom: 8rem;
     }
 }
@@ -92,6 +93,27 @@
 
     }
 }
+//
+// .lead-grid {
+//     display: grid;
+//     border: 1px solid;
+//     grid-template-columns: repeat(12, 1fr);
+//     grid-template-rows: repeat(4, 200px);
+//
+//     &__copy {
+//         grid-column: 1 / span 9;
+//         grid-row-start: 1;
+//         grid-row-end:   3;
+//         position: relative;
+//         z-index: 1;
+//     }
+//     &__photo {
+//         grid-row-start: 2;
+//         grid-column-start: 1;
+//         grid-column-end: 13;
+//         position: relative;
+//     }
+// }
 
 .welcome {
 
@@ -124,4 +146,53 @@
     //         text-transform: uppercase;
     //     }
     // }
+}
+
+.parent {
+    &__engagement {
+        .row > .col-sm-4 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}
+.engagement {
+    border: 1px solid;
+
+    &__photo{
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+
+        &__underlay {
+            border: 1px solid red;
+            height: 100%;
+            width: 100%;
+            border-radius: 120px;
+            transform: translate(50%, -120px) rotateZ(45deg);
+
+            &--pink{
+                background: #fff2ee;
+            }
+            &--green{
+                background: #d1eaf0;
+            }
+            &--blue{
+                background: ##2281f9;
+            }
+        }
+    }
+    &__content {
+        padding: 1rem;
+        h3{
+            margin: 0;
+        }
+    }
+    &__action {
+        border: 1px solid red;
+        padding: 1rem;
+        background: #3a2dbd;
+        display: flex;
+        justify-content: space-between;
+    }
 }
