@@ -55,7 +55,7 @@
             }
             &__typer {
                 font-weight: bold;
-                color: #1c08ae;
+                color: get-color(red,0);
             }
         }
 
@@ -81,7 +81,7 @@
     }
     &__item {
         filter: grayscale(100%);
-        border: 2px solid #000;
+        border: 2px solid get-color(black);
         transition: filter 300ms ease-in-out;
         &:hover {
             filter: grayscale(0%);
@@ -92,14 +92,14 @@
         &__p1 {
             grid-column: 1 / span 6;
             grid-row:1/ span 9;
-            background-color: #f3d3d3;
+            background-color: get-color(yellow,5);
             background-image: url(../img/p1.png);
             background-size: cover;
         }
         &__p2 {
             grid-column: 1 / span 6;
             grid-row:10/ span 13;
-            background-color: #f6ec78;
+            background-color: get-color(green,5);
             margin-top: 10px;
             background-image: url(../img/p2.png);
             background-size: cover;
@@ -107,7 +107,7 @@
         &__p3 {
             grid-column: 7 / span 11;
             grid-row:1/ span 5;
-            background-color: #cdf3ea;
+            background-color: get-color(blue,5);
             margin-left: 10px;
             background-image: url(../img/p3.png);
             background-size: cover;
@@ -115,7 +115,7 @@
         &__p4 {
             grid-column: 7 / span 11;
             grid-row:6/ span 3;
-            background-color: #1c08ae;
+            background-color: get-color(red,5);
             margin-left: 10px;
             margin-top: 10px;
             background-image: url(../img/p4.png);
@@ -124,7 +124,7 @@
         &__p5 {
             grid-column: 7 / span 11;
             grid-row:9/ span 12;
-            background-color: #b6e4fe;
+            background-color: get-color(gray,5);
             margin-left: 10px;
             margin-top: 10px;
             background-image: url(../img/p5.png);
@@ -153,11 +153,11 @@
 
 
         &--blue{
-            color: var(--mm-color-white);
-            background: var(--mm-color-blue-0);
+            color: get-color(white);
+            background: get-color(blue,0);
 
             &:hover {
-                background: color-mod(var(--mm-color-blue-1) shade(16%));
+                background: darken(get-color(blue,0), 20%);
             }
         }
     }
