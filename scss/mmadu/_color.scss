@@ -1,0 +1,78 @@
+//colors
+
+//Baseline
+$mm-color-black:#000000;
+$mm-color-white:#ffffff;
+
+//Gray List
+$mm-gray-list: (
+    "0":#121212,
+    "1":#3a3a3a,
+    "2":#616161,
+    "3":#898989,
+    "4":#b0b0b0,
+    "5":#d8d8d8
+);
+
+//Blue List
+$mm-blue-list: (
+    "0":#032AFF,
+    "1":#2D4DFF,
+    "2":#5771FF,
+    "3":#8194FF,
+    "4":#ABB8FF,
+    "5":#D5DCFF
+);
+
+
+//Red List
+$mm-red-list: (
+    "0":#EA0706,
+    "1":#f92524,
+    "2":#fb504f,
+    "3":#fc7c7b,
+    "4":#fda8a7,
+    "5":#fed3d3
+);
+
+//Green List
+$mm-green-list: (
+    "0":#17C63D,
+    "1":#27e651,
+    "2":#52eb74,
+    "3":#7ef096,
+    "4":#a9f5b9,
+    "5":#d4fadc
+);
+
+//Yellow List
+$mm-yellow-list: (
+    "0":#FCC41B,
+    "1":#fdce41,
+    "2":#fdd867,
+    "3":#fee28d,
+    "4":#feebb3,
+    "5":#fef5d9
+);
+
+// Loop through the lists and generate the baseline colors
+:root {
+    --mm-color-black:#000000;
+    --mm-color-white:#ffffff;
+
+    @each $position, $colour in $mm-gray-list { //gray
+        --mm-color-gray-#{$position}: #{$colour};
+    };
+    @each $position, $colour in $mm-blue-list { //blue
+        --mm-color-blue-#{$position}: #{$colour};
+    };
+    @each $position, $colour in $mm-red-list { //red
+        --mm-color-red-#{$position}: #{$colour};
+    };
+    @each $position, $colour in $mm-green-list { //green
+        --mm-color-green-#{$position}: #{$colour};
+    };
+    @each $position, $colour in $mm-yellow-list { //yellow
+        --mm-color-yellow-#{$position}: #{$colour};
+    };
+}

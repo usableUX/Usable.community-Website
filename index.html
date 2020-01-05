@@ -11,7 +11,7 @@
             <div class="container">
                 <div class="row align-items-center justify-content-between">
                     <div class="col-3 branding">
-                        <a href="#">
+                        <a href="index.html">
                             <svg width="143" height="35" viewBox="0 0 143 35" fill="none">
                               <path d="M18.17 9.25V20.07 20.11C18.17 21.9 18.17 23.78 17.85 25.15 17.57 26.67 16.88 28 15.83 28.82 14.82 29.65 13.58 30.06 12.21 30.15 10.47 30.2 8.95 29.74 7.9 28.78 5.98 27.13 5.61 24.24 5.61 21.08V9.25H0.75V21.26C0.7 25.38 0.98 29.69 4 32.35 6.25 34.32 9 34.83 11.66 34.64 13.9 34.5 16.33 33.68 17.94 31.89L18.72 30.98V34H22.98V9.25H18.17Z" fill="#252525"/>
                               <path d="M48.78 15.85C48.19 11.22 43.83 8.56 38.38 8.56 33.43 8.56 28.8 10.99 28.8 15.8 28.8 19.38 31.18 21.35 34.58 22.31L40.17 23.87C42.41 24.51 43.97 25.2 43.97 27.13 43.97 29.33 41.86 30.47 39.25 30.47 36.18 30.47 33.57 29.14 32.92 26.3L28.02 27.08C28.98 32.4 33.29 34.69 39.07 34.69 44.66 34.69 48.92 31.94 48.92 26.9 48.92 22.77 46.22 20.94 41.36 19.7 39.34 19.2 37.97 18.83 36.78 18.46 34.76 17.91 33.61 17.09 33.61 15.62 33.61 13.83 35.72 12.69 38.47 12.78 41.27 12.87 43.47 14.15 43.88 16.72L48.78 15.85Z" fill="#252525"/>
@@ -24,10 +24,9 @@
                     </div>
                     <div class="col-9">
                         <div class="header__navigation">
-                            <ul>
+                            <ul role="navigation" aria-label="Main Navigation">
                                 <li><a href="#">Home</a></li>
                                 <li><a href="#">About</a></li>
-                                <li><a href="#">Programs</a></li>
                                 <li><a href="#">Partnerships</a></li>
                                 <li><a href="#">Code of Conduct</a></li>
                                 <li><a href="#">Contact</a></li>
@@ -39,81 +38,100 @@
             </div>
         </header>
 
-        <section class="blown">
+        <section id="landing">
             <div class="container">
-                <div class="row">
+                <div class="row  justify-content-between">
+                    <div class="col-xs-12 col-5">
+                        <div class="landing__copy">
+                            <h1 class="landing__copy__bigDeal">
+                                A design community for humans by humans.
+                            </h1>
+                            <div class="landing__copy__narrative">
+                                <p>We are a community of humans who are interested in building products driven by stories and designed to make people listen.
+                                    Beyond typography & colors, we are humans exploring conversations around
+                                    <span id="landing__copy__typer_pool">
+                                        <span>the business impact of design, </span>
+                                        <span>how to design inclusive products, </span>
+                                        <span>the adjacent UX career paths, </span>
+                                        <span>user research, </span>
+                                        <span>how to convince stakeholders in your organisation, </span>
+                                        <span>how to get started as a UX designer, </span>
+                                        <span>Design thinking, </span>
+                                        <span>the design of copy - Copywriters</span>
+                                    </span>
+                                    <span class="landing__copy__typer" role="presentation" aria-hidden="true"></span>
+                                </span>
 
-                    <div class="col-12">
-                        <h1 class="class-captain">A design community for humans by humans.</h1>
-                    </div>
-                    <div class="col-4">
-                        <p>At our monthly meetups, we talk about UX and things related to it: interaction design, visual design, user research, sketching and prototyping. We also explore the role of UX in the development process, marketing, business, everyday life.</p>
-                        <a href="#">Join the Community</a>
+                                <div class="landing__cta">
+                                    <div class="row justify-content-between">
+                                        <div class="col">
+                                            <a href="join.html" class="cta__bordered cta__button cta__button--blue">Join our community &#8594;</a>
+                                        </div>
+                                        <div class="col">
+                                            <a class="twitter-follow-button" href="https://twitter.com/usable_"> Follow @Usable_</a>
+                                        </div>
+                                    </div>
 
-                        <!-- Our Numbers -->
-                        <div class="numbers">
-                            <h4>Our Numbers</h4>
-
-                            <div class="numbers__block">
-                                <div class="numbers__block__entry">
-                                    <span class="numbers__digit">2000+</span>
-                                    <span class="numbers__label">Community Members</span>
-                                </div>
-                                <div class="numbers__block__entry">
-                                    <span class="numbers__digit">64</span>
-                                    <span class="numbers__label">Average Participation per Meetup</span>
-                                </div>
-                                <div class="numbers__block__entry">
-                                    <span class="numbers__digit">80+</span>
-                                    <span class="numbers__label">Community Events</span>
-                                </div>
-                                <div class="numbers__block__entry">
-                                    <span class="numbers__digit">35+</span>
-                                    <span class="numbers__label">Speakers Hosted</span>
                                 </div>
                             </div>
                         </div>
-
                     </div>
-                    <div class="col-8">
-
-                        <div class="welcome__grid">
-                            <div class="welcome__grid__image--top">
-                                <div class="mm--image__block">
-                                    <img src="https://usable.ng/img/4.jpg" width="100%" alt="">
-                                </div>
+                    <div class="col-xs-12 col-6" aria-hidden="true">
+                        <div class="landing__grid">
+                            <div class="grid__wrapper">
+                                <div class="grid__item grid__photo__p1"></div>
+                                <div class="grid__item grid__photo__p2"></div>
+                                <div class="grid__item grid__photo__p3"></div>
+                                <div class="grid__item grid__photo__p4"></div>
+                                <div class="grid__item grid__photo__p5"></div>
                             </div>
-                            <div class="welcome__grid__image--bottom"></div>
                         </div>
-                        <!-- <div class="welcome__testimonial">
-                            <h4>Some testimonials</h4>
-                            <div class="welcome__testimonial__quote">
-
-                                <blockquote>
-                                    <p>This has been a great opportunity to learn and grow</p>
-                                </blockquote>
-                            </div>
-                        </div> -->
-
                     </div>
                 </div>
-            </div>
 
+                <!-- <div class="row justify-content-between numbers">
+
+                    <div class="col numbers__block">
+                        <span class="numbers__block__figure">2000+</span>
+                        <span class="numbers__block__label">Community Members</span>
+                    </div>
+                    <div class="col numbers__block">
+                        <span class="numbers__block__figure">64</span>
+                        <span class="numbers__block__label">Average Participation per Meetup</span>
+                    </div>
+                    <div class="col numbers__block">
+                        <span class="numbers__block__figure">80+</span>
+                        <span class="numbers__block__label">Community Events</span>
+                    </div>
+                    <div class="col numbers__block">
+                        <span class="numbers__block__figure">35+</span>
+                        <span class="numbers__block__label">Speakers Events</span>
+                    </div>
+
+                </div> -->
+
+
+
+
+            </div>
         </section>
+
 
         <section class="parent__engagement">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div class="snippet__header">
-                            <h2 class="snippet__header__title">How we engage.</h2>
+                            <h1 class="snippet__header__title">How we engage.</h1>
                             <p class="snippet__header__subtitle">We drive our community via different medium. We invite you to choose where you want to engage.</p>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-4">
                         <div class="engagement">
                             <div class="engagement__photo">
-
+                                <div class="engagement__photo__image">
+                                    <img src="img/community.png" alt="">
+                                </div>
                                 <div class="engagement__photo__underlay engagement__photo__underlay--pink"></div>
 
                             </div>
@@ -250,5 +268,9 @@
 
             brought to you by FHxH.
         </footer>
+
+        <script src="js/typed.js"></script>
+        <script src="js/app-prod.js" type="text/javascript"></script>
+
     </body>
 </html>

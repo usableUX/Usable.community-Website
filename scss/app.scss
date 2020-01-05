@@ -17,6 +17,7 @@
     &__navigation {
         text-align: right;
         font-size: 14px;
+        font-weight: 500;
         text-transform: uppercase;
 
         ul {
@@ -36,6 +37,102 @@
     }
 }
 
+#landing {
+    padding: 10rem 0;
+
+    .landing {
+        &__copy {
+            &__bigDeal {
+                font-size: 5rem;
+            }
+            &__narrative {
+                p {
+                    font-size: 1.2rem;
+                    margin-bottom: 2rem;
+                    padding-bottom: 2rem;
+                    height: 11rem;
+                }
+            }
+            &__typer {
+                font-weight: bold;
+                color: #1c08ae;
+            }
+        }
+
+
+        &__photo {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+//Photo Grid
+
+.grid {
+    &__wrapper {
+        width: 100%;
+        height: 600px;
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        grid-template-rows: repeat(13,1fr);
+        justify-content: stretch;
+    }
+    &__item {
+        filter: grayscale(100%);
+        border: 2px solid #000;
+        transition: filter 300ms ease-in-out;
+        &:hover {
+            filter: grayscale(0%);
+        }
+    }
+    // Grid Photos
+    &__photo {
+        &__p1 {
+            grid-column: 1 / span 6;
+            grid-row:1/ span 9;
+            background-color: #f3d3d3;
+            background-image: url(../img/p1.png);
+            background-size: cover;
+        }
+        &__p2 {
+            grid-column: 1 / span 6;
+            grid-row:10/ span 13;
+            background-color: #f6ec78;
+            margin-top: 10px;
+            background-image: url(../img/p2.png);
+            background-size: cover;
+        }
+        &__p3 {
+            grid-column: 7 / span 11;
+            grid-row:1/ span 5;
+            background-color: #cdf3ea;
+            margin-left: 10px;
+            background-image: url(../img/p3.png);
+            background-size: cover;
+        }
+        &__p4 {
+            grid-column: 7 / span 11;
+            grid-row:6/ span 3;
+            background-color: #1c08ae;
+            margin-left: 10px;
+            margin-top: 10px;
+            background-image: url(../img/p4.png);
+            background-size: cover;
+        }
+        &__p5 {
+            grid-column: 7 / span 11;
+            grid-row:9/ span 12;
+            background-color: #b6e4fe;
+            margin-left: 10px;
+            margin-top: 10px;
+            background-image: url(../img/p5.png);
+            background-size: cover;
+        }
+    }
+}
+
 
 /***
 [Typography]
@@ -45,23 +142,28 @@
 /**
 [UTILITY]
 **/
+// - Call to Actions [CTAs]
+.cta {
+    &__bordered {
+        border: 1px solid;
+    }
+    &__button {
+        display: inline-block;
+        padding: .8rem;
 
-// -- Grid
 
-.welcome {
-    padding: 16rem 0 4rem 0;
-    border-bottom: 1px solid red;
-}
+        &--blue{
+            color: var(--mm-color-white);
+            background: var(--mm-color-blue-0);
 
-
-.blown {
-    padding: 10rem 0 8rem 0;
-    //background: #fbff47;
-    .class-captain {
-        font-size: 6rem;
-        margin-bottom: 8rem;
+            &:hover {
+                background: color-mod(var(--mm-color-blue-1) shade(16%));
+            }
+        }
     }
 }
+
+// -- Numbers
 
 .numbers {
     margin-top: 2rem;
@@ -93,69 +195,7 @@
 
     }
 }
-//
-// .lead-grid {
-//     display: grid;
-//     border: 1px solid;
-//     grid-template-columns: repeat(12, 1fr);
-//     grid-template-rows: repeat(4, 200px);
-//
-//     &__copy {
-//         grid-column: 1 / span 9;
-//         grid-row-start: 1;
-//         grid-row-end:   3;
-//         position: relative;
-//         z-index: 1;
-//     }
-//     &__photo {
-//         grid-row-start: 2;
-//         grid-column-start: 1;
-//         grid-column-end: 13;
-//         position: relative;
-//     }
-// }
 
-.welcome {
-
-    &__grid {
-        display: grid;
-        position: relative; // imperative for the overlapping to work
-        grid-template-columns: repeat(12, 1fr);
-
-        &__image--top {
-            grid-row: 1;
-            grid-column: 1 / span 11;
-            z-index: 1; // tells the browser to make this image on top
-        }
-        &__image--bottom {
-            grid-column: 6 / -1;
-            grid-row: 1;
-            height: 400px;
-            background: #0373FF;
-            margin-top: -4rem;
-            background-image: url("data:image/svg+xml,***<here place encoded svg>***");
-            background-repeat: no-repeat;
-        }
-
-    }
-    // &__testimonial {
-    //     border:1px solid;
-    //
-    //     h4 {
-    //         font-size: 1rem;
-    //         text-transform: uppercase;
-    //     }
-    // }
-}
-
-.parent {
-    &__engagement {
-        .row > .col-sm-4 {
-            display: flex;
-            flex-wrap: wrap;
-        }
-    }
-}
 .engagement {
     border: 1px solid;
 
@@ -163,6 +203,12 @@
         height: 300px;
         position: relative;
         overflow: hidden;
+        &__image {
+            border: 1px solid;
+            img {
+                width: 100%;
+            }
+        }
 
         &__underlay {
             border: 1px solid red;
@@ -178,7 +224,7 @@
                 background: #d1eaf0;
             }
             &--blue{
-                background: ##2281f9;
+                background: #2281f9;
             }
         }
     }
