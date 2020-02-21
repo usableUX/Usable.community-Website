@@ -7,9 +7,9 @@ body,html {
 p {margin-bottom: 1.25em;}
 
 h1, h2, h3, h4, h5 {
-  margin: 2.75rem 0 1rem;
   font-weight: bold;
   line-height: 1.15;
+  font-family: $mm-font-family-header;
 }
 
 h1 {

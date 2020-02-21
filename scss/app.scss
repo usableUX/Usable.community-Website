@@ -3,22 +3,22 @@
 // [GLOBAL STYLES]
 
 .container {
-    max-width: 1344px;
+    // max-width: 1280px;
 }
 
 // [Header]
 .header {
     padding: 16px 0;
-    position: absolute;
-    left: 0;
-    top: 0;
+    position: relative;
     width: 100%;
+
 
     &__navigation {
         text-align: right;
         font-size: 14px;
         font-weight: 500;
         text-transform: uppercase;
+        position: relative;
 
         ul {
             li {
@@ -34,16 +34,134 @@
             }
 
         }
+        &__button {
+            border: 1px solid;
+            display: inline-flex;
+            align-items: center;
+            font-size: 1rem;
+            padding: 4px 8px;
+            transition: background-color color 300ms ease-in-out;
+
+            &.is-active {
+                color: get-color(white);
+                background: get-color(black);
+            }
+        }
+
+        &__mobile {
+            border: 1px solid;
+            font-size: 1rem;
+            display: none;
+            transition: all 300ms ease-in-out;
+
+            &.is-active {
+                position: absolute;
+                display: block;
+                width: 100%;
+                top: 16px;
+                background: get-color(white);
+                left: 0;
+                z-index: 1;
+
+                li {
+                    a {
+                        border: 1px solid;
+                        padding-right: 16px;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+
+            li {
+                // border: 1px solid get-color(green,0);
+                a {
+                    padding: 10px 0;
+                    display: block;
+                    text-align: right;
+                    font-weight: 500;
+                }
+            }
+
+        }
+
+        //Navigation Menu Bars
+        &__bars {
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            margin-right: 8px;
+            margin-top: 1px;
+            position: relative;
+            transform: rotate(0deg);
+            transition: .5s ease-in-out;
+
+            span {
+                display: block;
+                position: absolute;
+                height: 4px;
+                width: 100%;
+                border-radius: 4px;
+                background: get-color(black);
+                opacity: 1;
+                left: 0;
+                transform: rotate(0deg);
+                transition: .25s ease-in-out;
+
+                &:nth-child(1){
+                    top: 1px;
+                    transform-origin: left center;
+                }
+                &:nth-child(2){
+                    top: 8px;
+                    transform-origin: left center;
+                }
+                &:nth-child(3){
+                    top: 15px;
+                    transform-origin: left center;
+                }
+            }
+            &.is-active {
+                span {
+                    &:nth-child(1){
+                        transform: rotate(45deg);
+                        top: 0px;
+                        left: 1px;
+                        background: get-color(white);
+                    }
+                    &:nth-child(2){
+                        width: 0%;
+                        opacity: 0;
+                    }
+                    &:nth-child(3){
+                        transform: rotate(-45deg);
+                        top: 16px;
+                        left: 1px;
+                        background: get-color(white);
+                    }
+                }
+            }
+        }
     }
+
 }
 
 #landing {
     padding: 10rem 0;
 
+    @include phone {
+        padding: 5rem 0;
+    }
+
+
     .landing {
         &__copy {
             &__bigDeal {
                 font-size: 5rem;
+
+                @include phone {
+                    font-size: 3.3rem;
+                }
             }
             &__narrative {
                 p {
@@ -144,13 +262,16 @@
 **/
 // - Call to Actions [CTAs]
 .cta {
+
+
     &__bordered {
         border: 1px solid;
+        border-radius: 4px;
     }
     &__button {
         display: inline-block;
         padding: .8rem;
-
+        font-weight: 600;
 
         &--blue{
             color: get-color(white);
@@ -195,50 +316,94 @@
 
     }
 }
+//
+// .engagement {
+//     border: 1px solid;
+//
+//     &__photo{
+//         height: 300px;
+//         position: relative;
+//         overflow: hidden;
+//         &__image {
+//             border: 1px solid;
+//             img {
+//                 width: 100%;
+//             }
+//         }
+//
+//         &__underlay {
+//             border: 1px solid red;
+//             height: 100%;
+//             width: 100%;
+//             border-radius: 120px;
+//             transform: translate(50%, -120px) rotateZ(45deg);
+//
+//             &--pink{
+//                 background: #fff2ee;
+//             }
+//             &--green{
+//                 background: #d1eaf0;
+//             }
+//             &--blue{
+//                 background: #2281f9;
+//             }
+//         }
+//     }
+//     &__content {
+//         padding: 1rem;
+//         h3{
+//             margin: 0;
+//         }
+//     }
+//     &__action {
+//         border: 1px solid red;
+//         padding: 1rem;
+//         background: #3a2dbd;
+//         display: flex;
+//         justify-content: space-between;
+//     }
+// }
 
-.engagement {
-    border: 1px solid;
 
-    &__photo{
-        height: 300px;
-        position: relative;
-        overflow: hidden;
-        &__image {
-            border: 1px solid;
-            img {
-                width: 100%;
-            }
-        }
+.program {
+    border: 2px solid;
+    display: flex;
+    justify-content: space-between;
 
-        &__underlay {
-            border: 1px solid red;
-            height: 100%;
+    &__iconography {
+        width: 45%;
+
+        img {
+            border: 2px solid;
             width: 100%;
-            border-radius: 120px;
-            transform: translate(50%, -120px) rotateZ(45deg);
+        }
+    }
+    &__info {
+        width: 45%;
+    }
 
-            &--pink{
-                background: #fff2ee;
-            }
-            &--green{
-                background: #d1eaf0;
-            }
-            &--blue{
-                background: #2281f9;
-            }
-        }
-    }
-    &__content {
-        padding: 1rem;
-        h3{
-            margin: 0;
-        }
-    }
-    &__action {
-        border: 1px solid red;
-        padding: 1rem;
-        background: #3a2dbd;
+    &__actions {
         display: flex;
         justify-content: space-between;
+
+        &--item {
+            border: 1px solid red;
+            width: 45%;
+        }
+    }
+}
+
+
+
+.events {
+    margin: 4rem 0;
+    background: get-color(yellow,0);
+    padding: 3rem 0;
+
+    .event__block {
+        background: get-color(white);
+        border-radius: 4px;
+        padding: 1rem;
+        box-shadow: 0px 0px 3px 0px rgba(10,10,10,0.32);
     }
 }
