@@ -16,7 +16,7 @@
                 <div class="row align-items-center justify-content-between">
                     <div class="col-xs-5 col-3 branding">
                         <a href="index.html">
-                            <svg width="143" height="35" viewBox="0 0 143 35" fill="none">
+                            <svg class="branding__logo" viewBox="0 0 143 35" fill="none">
                               <path d="M18.17 9.25V20.07 20.11C18.17 21.9 18.17 23.78 17.85 25.15 17.57 26.67 16.88 28 15.83 28.82 14.82 29.65 13.58 30.06 12.21 30.15 10.47 30.2 8.95 29.74 7.9 28.78 5.98 27.13 5.61 24.24 5.61 21.08V9.25H0.75V21.26C0.7 25.38 0.98 29.69 4 32.35 6.25 34.32 9 34.83 11.66 34.64 13.9 34.5 16.33 33.68 17.94 31.89L18.72 30.98V34H22.98V9.25H18.17Z" fill="#252525"/>
                               <path d="M48.78 15.85C48.19 11.22 43.83 8.56 38.38 8.56 33.43 8.56 28.8 10.99 28.8 15.8 28.8 19.38 31.18 21.35 34.58 22.31L40.17 23.87C42.41 24.51 43.97 25.2 43.97 27.13 43.97 29.33 41.86 30.47 39.25 30.47 36.18 30.47 33.57 29.14 32.92 26.3L28.02 27.08C28.98 32.4 33.29 34.69 39.07 34.69 44.66 34.69 48.92 31.94 48.92 26.9 48.92 22.77 46.22 20.94 41.36 19.7 39.34 19.2 37.97 18.83 36.78 18.46 34.76 17.91 33.61 17.09 33.61 15.62 33.61 13.83 35.72 12.69 38.47 12.78 41.27 12.87 43.47 14.15 43.88 16.72L48.78 15.85Z" fill="#252525"/>
                               <path d="M74.09 34V19.01C74.09 17.45 74 16.03 73.59 14.8 72.35 10.76 69.05 8.56 64.06 8.56 58.65 8.56 54.94 11.4 53.52 15.44L57.92 16.77C58.83 14.11 61.12 13.01 63.92 13.01 66.94 13.01 69.14 14.57 69.33 18 65.11 18.6 60.99 19.01 57.64 20.25 54.43 21.35 52.6 23.64 52.6 27.08 52.6 31.66 55.9 34.69 60.76 34.69 65.02 34.69 67.77 33.36 69.88 30.47V34H74.09ZM68.41 27.17C67.22 29.42 64.65 30.79 61.72 30.79 58.92 30.79 57.32 29.19 57.32 27.17 57.32 25.2 58.83 24.05 61.08 23.46 63.46 22.77 65.66 22.54 69.33 21.99 69.33 23.37 69.28 25.66 68.41 27.17Z" fill="#252525"/>
@@ -59,28 +59,20 @@
             </div>
         </header>
 
-        <section id="landing">
+        <!-- <section id="landing">
             <div class="container">
                 <div class="row  justify-content-between">
+                    <div class="col-sm-12">
+                        <h1 class="landing__copy__bigDeal">
+                            A design community for humans by humans
+                        </h1>
+                    </div>
                     <div class="col-xs-12 col-sm-5">
                         <div class="landing__copy">
-                            <h1 class="landing__copy__bigDeal">
-                                A design community for humans by humans.
-                            </h1>
-                            <div class="landing__copy__narrative">
+                            <div class="landing__copy__copy">
                                 <p>We are a community of humans who are interested in building products <strike>driven by stories and designed to make people listen</strike>.
                                     Beyond typography & colors, we are humans exploring conversations around
-                                    <span id="landing__copy__typer_pool">
-                                        <span>the business impact of design; </span>
-                                        <span>how to design inclusive products; </span>
-                                        <span>the adjacent UX career paths; </span>
-                                        <span>user research; </span>
-                                        <span>how to convince stakeholders in your organisation; </span>
-                                        <span>how to get started as a UX designer; </span>
-                                        <span>Design thinking; </span>
-                                        <span>the design of copy - Copywriters</span>
-                                    </span>
-                                    <span class="landing__copy__typer" role="presentation" aria-hidden="true"></span>
+
                                 </span>
 
                                 <div class="landing__cta">
@@ -108,7 +100,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- <div class="row justify-content-between numbers">
 
@@ -134,8 +126,8 @@
 
 
 
-            </div>
-        </section>
+            <!-- </div>
+        </section> -->
 
 
         <!-- <section class="parent__engagement">
@@ -205,7 +197,56 @@
             </div>
         </section> -->
 
-        <section class="parent__engagement">
+        <section class="landing">
+            <div class="container">
+                <div class="row">
+                    <div class="col-5">
+                        <div class="landing__copy">
+                            <h1 class="landing__copy__title">
+                                A design community for humans by humans
+                            </h1>
+                            <p class="landing__copy__story">
+                                We are a community of humans who are interested in building products that are both beautiful and functional.
+                            </p>
+                        </div>
+                        <div class="landing__action">
+                            <a href="" class="button">Join the Community</a>
+                        </div>
+                        <div class="landing__ticker" role="presentation" aria-hidden="true">
+                            <h6>Some topics we talk about</h6>
+
+                            <div class="landing__ticker__slot" role="presentation" aria-hidden="true"></div>
+
+                            <span id="landing__ticker__pool" class="d-none">
+                                <span>The business impact of design; </span>
+                                <span>How to design inclusive products; </span>
+                                <span>The adjacent UX career paths; </span>
+                                <span>User research; </span>
+                                <span>How to convince stakeholders in your organisation; </span>
+                                <span>How to get started as a UX designer; </span>
+                                <span>Design thinking; </span>
+                                <span>Copywriting: The design of copy.</span>
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-12 col-sm-6 ml-auto" aria-hidden="true">
+                        <div class="landing__grid">
+                            <div class="grid__wrapper">
+                                <div class="grid__item grid__photo__p1"></div>
+                                <div class="grid__item grid__photo__p2"></div>
+                                <div class="grid__item grid__photo__p3"></div>
+                                <div class="grid__item grid__photo__p4"></div>
+                                <div class="grid__item grid__photo__p5"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- <section class="parent__engagement">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -246,7 +287,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
 
         <section class="events">
@@ -325,8 +366,8 @@
                 </div>
             </div>
         </section>
-        
-        <!-- <footer>
+
+        <footer>
             <div class="container">
                 <div class="row">
                     <div class="col-12">

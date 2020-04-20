@@ -1,35 +1,47 @@
 @import "./header.scss";
 
 // [GLOBAL STYLES]
-
 .container {
-    // max-width: 1280px;
+    max-width: 1200px;
 }
+
 
 // [Header]
 .header {
-    padding: 16px 0;
-    position: relative;
+    padding: 1rem 0;
     width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .branding {
+        &__logo {
+            width: 120px;
+            height: auto;
+        }
+    }
 
 
     &__navigation {
         text-align: right;
-        font-size: 14px;
-        font-weight: 500;
         text-transform: uppercase;
         position: relative;
 
         ul {
             li {
                 display: inline-block;
-                margin-right: 3rem;
+                font-size: 12px;
+                margin-right: 2rem;
+
                 &:last-child{
                     margin: 0;
                 }
 
                 a {
                     display: block;
+                    &:hover {
+                        color: red;
+                    }
                 }
             }
 
@@ -146,45 +158,23 @@
 
 }
 
-#landing {
-    padding: 10rem 0;
-
-    @include phone {
-        padding: 5rem 0;
-    }
 
 
-    .landing {
-        &__copy {
-            &__bigDeal {
-                font-size: 5rem;
+.landing {
+    background: get-color(blue,5);
+    background: linear-gradient(90deg, get-color(blue,5) 65%, get-color(white) 65%);
+    padding: 8rem 0 6rem 0;
+    margin-bottom: 4rem;
 
-                @include phone {
-                    font-size: 3.3rem;
-                }
-            }
-            &__narrative {
-                p {
-                    font-size: 1.2rem;
-                    margin-bottom: 2rem;
-                    padding-bottom: 2rem;
-                    height: 11rem;
-                }
-            }
-            &__typer {
-                font-weight: bold;
-                color: get-color(red,0);
-            }
-        }
-
-
-        &__photo {
-            img {
-                width: 100%;
-            }
+    &__copy {
+        &__title{
+            font-size: 4rem;
+            line-height: 1;
+            margin-bottom: 2rem;
         }
     }
 }
+
 
 //Photo Grid
 
@@ -196,17 +186,32 @@
         grid-template-columns: repeat(12,1fr);
         grid-template-rows: repeat(13,1fr);
         justify-content: stretch;
+        position: relative;
+
+        &::after{
+            content: "";
+            border-radius: 4px;
+            display: block;
+            position: absolute;
+            top: -65px;
+            right: -65px;
+            width: 130px;
+            height: 230px;
+            z-index: 0;
+
+            /* Controls size of dot */
+            background-image: radial-gradient(get-color(blue,4) 20%, rgba(255, 255, 0, 0.0) 0%);
+            background-size:12px 12px;
+        }
     }
     &__item {
-        filter: grayscale(100%);
-        border: 2px solid get-color(black);
-        transition: filter 300ms ease-in-out;
-        &:hover {
-            filter: grayscale(0%);
-        }
+        border-radius: 3px;
+        z-index: 1;
     }
     // Grid Photos
     &__photo {
+
+        position: relative;
         &__p1 {
             grid-column: 1 / span 6;
             grid-row:1/ span 9;
@@ -230,6 +235,8 @@
             background-image: url(../img/p3.png);
             background-size: cover;
         }
+
+
         &__p4 {
             grid-column: 7 / span 11;
             grid-row:6/ span 3;
@@ -249,8 +256,29 @@
             background-size: cover;
         }
     }
+
 }
 
+
+.landing__ticker {
+    margin-top: 2rem;
+    position: relative;
+    font-size: .8rem;
+    height: 80px;
+    display: block;
+
+    h6 {
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: get-color(gray,2);
+    }
+    &__slot {
+        font-weight: 500;
+
+    }
+
+}
 
 /***
 [Typography]
@@ -260,7 +288,17 @@
 /**
 [UTILITY]
 **/
-// - Call to Actions [CTAs]
+.button {
+    border: 1px solid;
+    display: inline-block;
+    padding: .8rem 1.2rem;
+    font-size: .85rem;
+    margin: 1rem 0;
+    border-radius: 2px;
+    background: get-color(blue, 0);
+    color: get-color(white);
+}
+
 .cta {
 
 
@@ -399,6 +437,7 @@
     margin: 4rem 0;
     background: get-color(yellow,0);
     padding: 3rem 0;
+
 
     .event__block {
         background: get-color(white);
