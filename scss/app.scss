@@ -39,8 +39,11 @@
 
                 a {
                     display: block;
+                    font-weight: 500;
+                    transition: color 300ms ease-in-out;
+                    color: get-color(gray,2);
                     &:hover {
-                        color: red;
+                        color: get-color(blue,0);
                     }
                 }
             }
@@ -158,21 +161,27 @@
 
 }
 
-
-
 .landing {
-    background: get-color(blue,5);
-    background: linear-gradient(90deg, get-color(blue,5) 65%, get-color(white) 65%);
-    padding: 8rem 0 6rem 0;
-    margin-bottom: 4rem;
+    padding: 8rem 0 4rem 0;
+
+    @include phone {
+        padding: 6rem 0 0rem 0;
+        background: linear-gradient(180deg, get-color(blue,5) 65%, get-color(white) 65%);
+    }
+
 
     &__copy {
         &__title{
             font-size: 4rem;
-            line-height: 1;
+            line-height: 1.1;
             margin-bottom: 2rem;
+
+            @include phone {
+                font-size: 2.4rem;
+            }
         }
     }
+
 }
 
 
@@ -188,20 +197,56 @@
         justify-content: stretch;
         position: relative;
 
-        &::after{
+
+        &::before{
             content: "";
-            border-radius: 4px;
+            border-radius: 3px;
             display: block;
             position: absolute;
-            top: -65px;
-            right: -65px;
-            width: 130px;
-            height: 230px;
+            top: -20px;
+            left: -20px;
+            width: 200px;
+            height: 200px;
             z-index: 0;
 
             /* Controls size of dot */
-            background-image: radial-gradient(get-color(blue,4) 20%, rgba(255, 255, 0, 0.0) 0%);
-            background-size:12px 12px;
+            color:  get-color(red,5);
+            background-image: repeating-linear-gradient(45deg, currentColor 0, currentColor 1px, transparent 0, transparent 50%);
+            background-size:10px 10px;
+
+            // @include phone {
+            //     width: 100px;
+            //     height: 100px;
+            //     right: 0px;
+            //     top: auto;
+            //     bottom: -60px;
+            // }
+        }
+
+        &::after{
+            content: "";
+            border-radius: 4px;
+            border: 1px solid get-color(yellow,5);
+            display: block;
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 200px;
+            height: 200px;
+            z-index: 0;
+
+            /* Controls size of dot */
+            color:  get-color(yellow,3);
+            background-image: repeating-linear-gradient(45deg, currentColor 0, currentColor 1px, transparent 0, transparent 50%);
+            background-size:10px 10px;
+
+            // @include phone {
+            //     width: 100px;
+            //     height: 100px;
+            //     right: 0px;
+            //     top: auto;
+            //     bottom: -60px;
+            // }
         }
     }
     &__item {
@@ -298,140 +343,62 @@
     background: get-color(blue, 0);
     color: get-color(white);
 }
-
-.cta {
-
-
-    &__bordered {
-        border: 1px solid;
-        border-radius: 4px;
-    }
-    &__button {
-        display: inline-block;
-        padding: .8rem;
-        font-weight: 600;
-
-        &--blue{
-            color: get-color(white);
-            background: get-color(blue,0);
-
-            &:hover {
-                background: darken(get-color(blue,0), 20%);
-            }
-        }
-    }
-}
-
-// -- Numbers
-
-.numbers {
-    margin-top: 2rem;
-
-    h4 {
-        margin: 1rem 0 1rem 0;
-
-    }
-    &__block {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-
-        &__entry {
-            width: 48%;
-            margin-bottom: 4%;
-
-        }
-
-    }
-
-    &__digit {
-        font-size: 2.4rem;
-        font-weight: 600;
-    }
-    &__label {
-        display: block;
-        font-size: 14px;
-
-    }
-}
 //
-// .engagement {
-//     border: 1px solid;
+// .cta {
 //
-//     &__photo{
-//         height: 300px;
-//         position: relative;
-//         overflow: hidden;
-//         &__image {
-//             border: 1px solid;
-//             img {
-//                 width: 100%;
-//             }
-//         }
 //
-//         &__underlay {
-//             border: 1px solid red;
-//             height: 100%;
-//             width: 100%;
-//             border-radius: 120px;
-//             transform: translate(50%, -120px) rotateZ(45deg);
-//
-//             &--pink{
-//                 background: #fff2ee;
-//             }
-//             &--green{
-//                 background: #d1eaf0;
-//             }
-//             &--blue{
-//                 background: #2281f9;
-//             }
-//         }
+//     &__bordered {
+//         border: 1px solid;
+//         border-radius: 4px;
 //     }
-//     &__content {
-//         padding: 1rem;
-//         h3{
-//             margin: 0;
+//     &__button {
+//         display: inline-block;
+//         padding: .8rem;
+//         font-weight: 600;
+//
+//         &--blue{
+//             color: get-color(white);
+//             background: get-color(blue,0);
+//
+//             &:hover {
+//                 background: darken(get-color(blue,0), 20%);
+//             }
 //         }
-//     }
-//     &__action {
-//         border: 1px solid red;
-//         padding: 1rem;
-//         background: #3a2dbd;
-//         display: flex;
-//         justify-content: space-between;
 //     }
 // }
 
-
-.program {
-    border: 2px solid;
-    display: flex;
-    justify-content: space-between;
-
-    &__iconography {
-        width: 45%;
-
-        img {
-            border: 2px solid;
-            width: 100%;
-        }
-    }
-    &__info {
-        width: 45%;
-    }
-
-    &__actions {
-        display: flex;
-        justify-content: space-between;
-
-        &--item {
-            border: 1px solid red;
-            width: 45%;
-        }
-    }
-}
-
-
+// -- Numbers
+//
+// .numbers {
+//     margin-top: 2rem;
+//
+//     h4 {
+//         margin: 1rem 0 1rem 0;
+//
+//     }
+//     &__block {
+//         display: flex;
+//         flex-wrap: wrap;
+//         justify-content: space-between;
+//
+//         &__entry {
+//             width: 48%;
+//             margin-bottom: 4%;
+//
+//         }
+//
+//     }
+//
+//     &__digit {
+//         font-size: 2.4rem;
+//         font-weight: 600;
+//     }
+//     &__label {
+//         display: block;
+//         font-size: 14px;
+//
+//     }
+// }
 
 .events {
     margin: 4rem 0;
@@ -445,4 +412,196 @@
         padding: 1rem;
         box-shadow: 0px 0px 3px 0px rgba(10,10,10,0.32);
     }
+}
+
+
+//Homepage
+.community {
+    margin-top: 4rem;
+
+    @include phone {
+        .col-md-6 {
+            margin-top: 4rem;
+            background: get-color(yellow,5);
+        }
+    }
+
+    &__signup {
+        padding: 2rem;
+        background: get-color(yellow,5);
+        font-size: 16px;
+        position: relative;
+        border-radius: 3px;
+        z-index: 3;
+
+
+
+
+        @include phone {
+            padding: 2rem 0rem;
+
+        }
+
+
+        &__form {
+            padding: 2rem;
+            margin: 1rem 0;
+            background: get-color(white);
+            box-shadow: 0px 4px 6px 2px rgba(get-color(yellow,3),.3);
+            border-radius: 3px;
+            z-index: 2;
+
+            @include phone {
+                padding: 1rem;
+            }
+
+        }
+
+        &__valueprop {
+            display: flex;
+            justify-content: space-between;
+            font-size: .8rem;
+
+            @include phone {
+                display: none;
+                visibility: hidden;
+            }
+
+            &__item {
+                max-width: 31%;
+
+                i {
+                    font-size: 1.5rem;
+                    display: block;
+                    margin-bottom: 5px;
+
+                }
+            }
+
+        }
+    }
+    &__program {
+        padding-top: 1rem;
+
+        &__wrapper { }
+        &__item {
+            border: 1px solid get-color(blue,2);
+            padding: 1rem;
+            margin-bottom: .5rem;
+            transition: background-color 300ms ease-in-out;
+            font-size: 16px;
+
+            &:hover {
+                background-color: lighten(get-color(blue,5),3%);
+            }
+
+            h5 {
+                margin-bottom: .4rem;
+            }
+            p {
+                font-size: .8rem;
+                color: get-color(gray,3);
+                margin: 0;
+            }
+            a {
+                font-size: .8rem;
+            }
+
+        }
+    }
+}
+
+
+//Generic Form Styling
+.form {
+
+    &__item {
+        display: block;
+        margin-bottom: 1rem;
+
+
+        input[type=text],input[type=email] {
+            width: 100%;
+            border: 1px solid get-color(gray,4);
+            font-size: 1rem;
+            line-height: 1;
+            padding: .5rem;
+            border-radius: 3px;
+        }
+        .form__item__label {
+            color: get-color(gray,1);
+            font-weight: 500;
+            display: block;
+            line-height: 1.6;
+
+
+            sup {
+                color: get-color(red,0);
+            }
+        }
+
+        &__description {
+            font-size: .6rem;
+            color: get-color(gray,0);
+            display: inline-block;
+            margin-top: .5rem;
+        }
+    }
+    &__group {
+        display: flex;
+        justify-content: space-between;
+        @include phone {
+            flex-wrap: wrap;
+        }
+        >div {
+            max-width: 48%;
+
+            @include phone {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+
+    }
+    &__radio {
+        display: flex;
+        flex-wrap: wrap;
+
+        .form__item__label {
+            display: block;
+            flex-shrink: 0;
+            width: 100%;
+
+        }
+        &__option {
+            margin-top: .5rem;
+            margin-right: 1rem;
+        }
+    }
+    &__submit {
+        &__button {
+            @extend .button;
+            cursor: pointer;
+            width: 100%;
+            background: get-color(blue, 0);
+        }
+        &__disclaimer {
+            font-size: .6rem;
+            display: block;
+            a {
+                text-decoration: underline;
+                color: get-color(blue,0);
+            }
+        }
+
+    }
+
+}
+
+//// Different Pages
+
+.page__header {
+    padding: 8rem 0 6rem 0;
+    border: 2px solid;
 }

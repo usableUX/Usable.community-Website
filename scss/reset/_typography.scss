@@ -26,3 +26,20 @@ h4 {font-size: 1.563em;}
 h5 {font-size: 1.25em;}
 
 small, .text_small {font-size: 0.8em;}
+
+
+
+/// Font Families
+
+/** silka_monoregular **/
+
+@font-face {
+    font-family: 'silka_monoregular';
+    src: url('../font/silkamono/silkamono-regular-webfont.eot');
+    src: url('../font/silkamono/silkamono-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/silkamono/silkamono-regular-webfont.woff2') format('woff2'),
+         url('../font/silkamono/silkamono-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}

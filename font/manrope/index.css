@@ -53,3 +53,9 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased; }
+
+
+
+.font-manrope {
+    font-family: "Manrope";
+}

@@ -13,26 +13,6 @@ var options = {
     loop: true,
 };
 
-var typed = new Typed('.landing__ticker__slot', options);
-
-//Initialize Twitter
-window.twttr = (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0],
-            t = window.twttr || {};
-        if (d.getElementById(id)) return t;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://platform.twitter.com/widgets.js";
-        fjs.parentNode.insertBefore(js, fjs);
-
-        t._e = [];
-        t.ready = function(f) {
-            t._e.push(f);
-        };
-
-        return t;
-}(document, "script", "twitter-wjs"));
-
 // Google Analytics
 window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 ga('create', 'UA-31913096-19', 'auto');
@@ -43,36 +23,57 @@ ga('require', 'outboundLinkTracker');
 ga('require', 'urlChangeTracker');
 
 
-/*
-    {{Mobile Menu Navigation Toggle}}
-*/
-//
-// document.getElementById('mobileMenu').addEventListener('click', function(e){
-//     e.preventDefault();
-//
-//     var mobileMenu = document.getElementById('mobileMenu');
-//     var mobileNavigation = document.getElementById('mobileNavigation');
-//     mobileMenu.classList.toggle('is-active');
-//     mobileMenu.classList.toggle('is-active');
-//
-// });
-
-// querySelector returns the first element it finds with the correct selector
-// so it needs a unique class name or you're only grabbing one element
-
-// document.querySelector('.header__navigation__button').addEventListener('click', function(e) {
-//   [].map.call(document.querySelectorAll('.header__navigation__mobile, .header__navigation__bars, .header__navigation__button'), function(el) {
-//
-//     el.classList.toggle('is-active');
-//   });
-//
-// });
-
-
 // Gave up writing vanilla and went with jQuery
 $(document).ready(function() {
     $('.header__navigation__button').on('click', function(e){
         e.preventDefault();
         $('.header__navigation__mobile, .header__navigation__bars, .header__navigation__button').toggleClass('is-active')
     });
+
+    if (typeof Typed == 'function') {
+      var typed = new Typed('.landing__ticker__slot', options);
+    }
+
+
+
+    //* Smooth Scrolling for all anchor links.
+    // https://css-tricks.com/snippets/jquery/smooth-scrolling/
+
+    // Select all links with hashes
+    $('a[href*="#"]')
+        // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function(event) {
+        // On-page links
+        if (
+          location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+          &&
+          location.hostname == this.hostname
+        ) {
+          // Figure out element to scroll to
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          // Does a scroll target exist?
+          if (target.length) {
+            // Only prevent default if animation is actually gonna happen
+            event.preventDefault();
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 1000, function() {
+              // Callback after animation
+              // Must change focus!
+              var $target = $(target);
+              $target.focus();
+              if ($target.is(":focus")) { // Checking if the target was focused
+                return false;
+              } else {
+                $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                $target.focus(); // Set focus again
+              };
+            });
+          }
+        }
+    });
+
 });
