@@ -161,6 +161,9 @@
 
 }
 
+
+// [Home]
+
 .landing {
     padding: 8rem 0 4rem 0;
 
@@ -172,13 +175,46 @@
 
     &__copy {
         &__title{
-            font-size: 4rem;
-            line-height: 1.1;
+            font-size: 3.2rem;
             margin-bottom: 2rem;
+            overflow: hidden;
+            padding-top: 2rem;
+
+            span {
+
+                display: block;
+                animation: fadeInUp .8s;
+                animation-delay: .5s;
+                animation-fill-mode: forwards;
+                animation-timing-function: cubic-bezier(.075, .82, .165, 1);
+                transform: translateY(115%);
+                display: block;
+
+                &:nth-child(2){
+                    animation-delay: .8s;
+                }
+                &:nth-child(3){
+                    animation-delay: 1s;
+                }
+                &::selection {
+                    background: get-color(yellow,3);
+                }
+            }
+
+            &::selection {
+                background: get-color(yellow,3);
+            }
 
             @include phone {
-                font-size: 2.4rem;
+                font-size: 2.6rem;
             }
+        }
+    }
+    .col-md-6 {
+        @include phone {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            overflow: hidden;
         }
     }
 
@@ -188,6 +224,9 @@
 //Photo Grid
 
 .grid {
+
+
+
     &__wrapper {
         width: 100%;
         height: 600px;
@@ -214,19 +253,12 @@
             background-image: repeating-linear-gradient(45deg, currentColor 0, currentColor 1px, transparent 0, transparent 50%);
             background-size:10px 10px;
 
-            // @include phone {
-            //     width: 100px;
-            //     height: 100px;
-            //     right: 0px;
-            //     top: auto;
-            //     bottom: -60px;
-            // }
         }
 
         &::after{
             content: "";
             border-radius: 4px;
-            border: 1px solid get-color(yellow,5);
+            // border: 1px solid get-color(yellow,5);
             display: block;
             position: absolute;
             bottom: -20px;
@@ -239,14 +271,6 @@
             color:  get-color(yellow,3);
             background-image: repeating-linear-gradient(45deg, currentColor 0, currentColor 1px, transparent 0, transparent 50%);
             background-size:10px 10px;
-
-            // @include phone {
-            //     width: 100px;
-            //     height: 100px;
-            //     right: 0px;
-            //     top: auto;
-            //     bottom: -60px;
-            // }
         }
     }
     &__item {
@@ -300,7 +324,9 @@
             background-image: url(../img/p5.png);
             background-size: cover;
         }
+
     }
+
 
 }
 
@@ -343,66 +369,107 @@
     background: get-color(blue, 0);
     color: get-color(white);
 }
-//
-// .cta {
-//
-//
-//     &__bordered {
-//         border: 1px solid;
-//         border-radius: 4px;
-//     }
-//     &__button {
-//         display: inline-block;
-//         padding: .8rem;
-//         font-weight: 600;
-//
-//         &--blue{
-//             color: get-color(white);
-//             background: get-color(blue,0);
-//
-//             &:hover {
-//                 background: darken(get-color(blue,0), 20%);
-//             }
-//         }
-//     }
-// }
 
-// -- Numbers
-//
-// .numbers {
-//     margin-top: 2rem;
-//
-//     h4 {
-//         margin: 1rem 0 1rem 0;
-//
-//     }
-//     &__block {
-//         display: flex;
-//         flex-wrap: wrap;
-//         justify-content: space-between;
-//
-//         &__entry {
-//             width: 48%;
-//             margin-bottom: 4%;
-//
-//         }
-//
-//     }
-//
-//     &__digit {
-//         font-size: 2.4rem;
-//         font-weight: 600;
-//     }
-//     &__label {
-//         display: block;
-//         font-size: 14px;
-//
-//     }
-// }
+.community {
+    padding: 4rem 0;
+    margin-top: 4rem;
+    //background: linear-gradient(90deg, get-color(blue,5) 65%, get-color(white) 65%);
+
+    .group__title {
+        h1 {
+            margin-bottom: 1rem;
+        }
+    }
+    &__program {
+
+        &__item {
+            display: flex;
+            justify-content: center;
+
+            transition: background-color 300ms ease-in-out;
+            margin-bottom: 1.5rem;
+
+
+            &__icon {
+                margin-right: .5rem;
+
+                i {
+                    font-size: 1rem;
+                }
+            }
+            &__copy {
+                font-size: 14px;
+                h5 {
+                    font-size: 1rem;
+                    margin-bottom: .5rem;
+                }
+
+                p {
+                    margin: 0;
+
+                }
+                a {
+                    display: block;
+                    margin-top: .5rem;
+                }
+            }
+
+        }
+
+    }
+
+    &__signup {
+        padding: 2rem;
+        background: get-color(yellow,5);
+        font-size: 16px;
+        position: relative;
+        border-radius: 3px;
+        z-index: 3;
+        margin-top: 5rem;
+
+        &::before{
+            content: "";
+            border-radius: 3px;
+            display: block;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+
+            /* Controls size of dot */
+            color:  lighten(get-color(yellow,0),30%);
+            background-image: repeating-linear-gradient(45deg, currentColor 0, currentColor 1px, transparent 0, transparent 50%);
+            background-size:10px 10px;
+
+        }
+
+        &__title {
+            text-align: center;
+        }
+
+        &__form {
+            padding: 2rem;
+            margin: 1rem 0;
+            background: get-color(white);
+            box-shadow: 0px 4px 6px 2px rgba(get-color(yellow,3),.3);
+
+            border-radius: 3px;
+            z-index: 2;
+
+            @include phone {
+                padding: 1rem;
+            }
+
+        }
+    }
+
+}
+
 
 .events {
     margin: 4rem 0;
-    background: get-color(yellow,0);
     padding: 3rem 0;
 
 
@@ -414,103 +481,100 @@
     }
 }
 
+.updates {
+    padding: 8rem 0 4rem 0;
 
-//Homepage
-.community {
-    margin-top: 4rem;
 
-    @include phone {
-        .col-md-6 {
-            margin-top: 4rem;
-            background: get-color(yellow,5);
-        }
-    }
+    &__item {
 
-    &__signup {
-        padding: 2rem;
-        background: get-color(yellow,5);
-        font-size: 16px;
-        position: relative;
         border-radius: 3px;
-        z-index: 3;
-
-
+        border: 2px solid get-color(dark);
+        padding: 1rem;
+        min-height: 420px;
+        display: block;
+        position: relative;
+        background: get-color(white);
 
 
         @include phone {
-            padding: 2rem 0rem;
-
+            min-height: 380px;
+            margin-bottom: 2rem;
         }
 
-
-        &__form {
-            padding: 2rem;
-            margin: 1rem 0;
-            background: get-color(white);
-            box-shadow: 0px 4px 6px 2px rgba(get-color(yellow,3),.3);
+        &::after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: get-color(blue,3);
+            position: absolute;
+            top: 12px;
+            left: 12px;
             border-radius: 3px;
-            z-index: 2;
+            z-index: -1;
+            transition: all 300ms ease-in-out;
 
-            @include phone {
-                padding: 1rem;
-            }
+        }
+        i {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            transition: all 300ms ease-in-out;
+        }
+        h3 {
+            font-size: 1.6rem;
+            padding-top: .5rem;
+        }
+
+        .updates__item__meta {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
 
         }
 
-        &__valueprop {
-            display: flex;
-            justify-content: space-between;
-            font-size: .8rem;
 
-            @include phone {
-                display: none;
-                visibility: hidden;
-            }
 
-            &__item {
-                max-width: 31%;
-
-                i {
-                    font-size: 1.5rem;
-                    display: block;
-                    margin-bottom: 5px;
-
-                }
-            }
-
+        &__type {
+            //font-family: $mm-font-family-header;
+            font-size: 14px;
+            color: get-color(gray,2);
         }
-    }
-    &__program {
-        padding-top: 1rem;
 
-        &__wrapper { }
-        &__item {
-            border: 1px solid get-color(blue,2);
-            padding: 1rem;
-            margin-bottom: .5rem;
-            transition: background-color 300ms ease-in-out;
-            font-size: 16px;
+        &__source {
+            font-size: .9rem;
+            display: block;
+            padding: 1rem 0;
+        }
 
-            &:hover {
-                background-color: lighten(get-color(blue,5),3%);
-            }
+        .event__date {
 
-            h5 {
-                margin-bottom: .4rem;
-            }
-            p {
-                font-size: .8rem;
-                color: get-color(gray,3);
-                margin: 0;
-            }
-            a {
-                font-size: .8rem;
-            }
+            font-family: $mm-font-family-header;
+            display: inline-block;
 
+            &__day {
+                font-size: 3rem;
+                font-weight: 400;
+                display: block;
+                line-height: 2rem;
+
+            }
+            &__month {
+                font-size: 14px;
+
+            }
+        }
+
+        &:hover {
+            &::after {
+                background: get-color(red,5);
+            }
+            i {
+                color: get-color(red,0);
+            }
         }
     }
 }
-
 
 //Generic Form Styling
 .form {
@@ -518,7 +582,6 @@
     &__item {
         display: block;
         margin-bottom: 1rem;
-
 
         input[type=text],input[type=email] {
             width: 100%;
@@ -533,6 +596,7 @@
             font-weight: 500;
             display: block;
             line-height: 1.6;
+            margin-bottom: .4rem;
 
 
             sup {
@@ -576,9 +640,51 @@
         }
         &__option {
             margin-top: .5rem;
-            margin-right: 1rem;
+            margin-right: 1.2rem;
+
+            label {
+                padding-left: .3rem;
+            }
         }
     }
+
+    &__dropdown {
+
+        select {
+            border: 1px solid green;
+            padding: .6rem 1rem;
+        	width: 100%;
+        	max-width: 100%;
+        	box-sizing: border-box;
+        	margin: 0;
+        	border: 1px solid get-color(gray,4);
+        	// box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+        	border-radius: 3px;
+        	appearance: none;
+        	background-color: #fff;
+        	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+        	  linear-gradient(to bottom, #ffffff 0%, get-color(blue,5) 100%);
+        	background-repeat: no-repeat, repeat;
+        	background-position: right .7em top 50%, 0 0;
+        	background-size: .65em auto, 100%;
+
+
+            &::-ms-expand {
+            	display: none;
+            }
+            &:hover {
+            	border-color: #888;
+            }
+            &:focus {
+
+            }
+
+            option {
+                font-weight: normal;
+            }
+        }
+    }
+
     &__submit {
         &__button {
             @extend .button;
@@ -604,4 +710,30 @@
 .page__header {
     padding: 8rem 0 6rem 0;
     border: 2px solid;
+}
+
+.snippet__header {
+    margin-bottom: 2rem;
+}
+
+
+
+////**** ANIMATIONS *****/
+
+@keyframes up {
+    to {
+        transform: translateY(-5%)
+    }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
