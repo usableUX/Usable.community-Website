@@ -6,7 +6,14 @@
 }
 
 section {
-    padding: 8rem 0 4rem 0;
+    padding: 4rem 0;
+    + section {
+        padding: 6rem 0 4rem 0;
+
+        @include phone {
+            padding: 4rem 0 0 0;
+        }
+    }
 }
 
 
@@ -234,8 +241,6 @@ section {
 
 .grid {
 
-
-
     &__wrapper {
         width: 100%;
         height: 600px;
@@ -380,14 +385,9 @@ section {
 }
 
 .community {
-    margin-top: 4rem;
+    // margin-top: 4rem;
     //background: linear-gradient(90deg, get-color(blue,5) 65%, get-color(white) 65%);
 
-    .group__title {
-        h1 {
-            margin-bottom: 1rem;
-        }
-    }
     &__program {
 
         &__item {
@@ -571,28 +571,28 @@ section {
 
 .partnerships {
     &__grid {
-        margin-top: 3.4rem;
-        border: 2px solid red;
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
 
         &__item {
-            border: 1px solid get-color(gray,5);
+            border: 1px solid get-color(gray,4);
             padding: 2rem;
             position: relative;
-            width: 200px;
-            height: 140px;
-            margin-bottom: 2rem;
+            min-width: 180px;
+            height: 100px;
+            margin-bottom: 1rem;
 
-
-
-            &::before {
-              content: "";
-              padding-bottom: 100%;
-              display: block;
+            @include phone {
+                width: calc(50% - 1rem);
+                flex-grow: 0;
             }
+
+
             img {
-                width: 90%;
+                width: 80%;
+                margin: 0;
                 position: absolute;
                 max-width: 90%;
                 top: 50%;
@@ -600,6 +600,12 @@ section {
                 transform: translate(-50%, -50%);
             }
         }
+    }
+}
+
+.group__title {
+    h1,h2,h3,h4,h5,h6 {
+        margin-bottom: 1rem;
     }
 }
 
@@ -738,6 +744,7 @@ section {
 
 
 }
+
 //Generic Form Styling
 .form {
 
@@ -871,7 +878,71 @@ section {
 
 .page__header {
     padding: 8rem 0 6rem 0;
-    border: 2px solid;
+
+    h1 {
+        font-size: 4rem;
+    }
+    @include phone {
+        padding: 6rem 0 4rem 0;
+        h1 {
+            font-size: 2rem;
+        }
+    }
+    &__title {
+        display: block;
+        margin-bottom: 1rem;
+        color: get-color(gray,2);
+    }
+}
+
+.team {
+    &__tile {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+
+        @include phone {
+            justify-content: space-between;
+        }
+
+        //Team member gallery.
+        &__item {
+            min-width: 150px;
+            margin-left: .7rem;
+            margin-bottom: 1rem;
+
+            $count: 10;
+
+            @for $i from 1 through $count {
+                &:nth-child(#{$i}){
+                    .team__tile__item__avatar {
+                        background-color: rgb(random(255),random(255),random(255));
+                    }
+
+                }
+            }
+
+            @include phone {
+                width: 48%;
+                margin-left: 0;
+            }
+
+            &__avatar {
+                width: 100%;
+                padding-top: 100%;
+                border-radius: 3px;
+                border: 2px solid get-color(gray, 0);
+                background-position: 50%;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            &__name {
+                text-align: center;
+                margin-top: .5rem;
+                font-weight: bold;
+            }
+        }
+    }
 }
 
 .snippet__header {
@@ -898,4 +969,17 @@ section {
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
+}
+
+
+////**** Utility *****/
+
+// padding
+.p-t-0 {
+    padding-top: 0;
+}
+
+.is-link {
+    color: get-color(blue,0);
+    text-decoration: underline;
 }
