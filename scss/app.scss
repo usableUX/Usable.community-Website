@@ -241,7 +241,9 @@ section {
 
 .grid {
 
+
     &__wrapper {
+        //box-shadow: 0px 0px 125px 20px rgba(153,53,255,0.2);
         width: 100%;
         height: 600px;
         display: grid;
@@ -607,8 +609,66 @@ section {
     h1,h2,h3,h4,h5,h6 {
         margin-bottom: 1rem;
     }
+
+    img {
+        width: 50%;
+        margin: 1rem 0;
+    }
 }
 
+
+/// Code of Conduct
+.rule {
+    display: flex;
+    flex-wrap: wrap;
+    &__item {
+        // border: 1px solid;
+        width: 33.33%;
+        margin-bottom: 2rem;
+        position: relative;
+        padding-top: .5rem;
+        padding-right: 1rem;
+        font-size: 14px;
+        color: get-color(gray,2);
+
+        @include phone {
+            width: 48%;
+        }
+
+        h6 {
+            font-weight: 600;
+            margin-bottom: .5rem;
+            color: get-color(black);
+        }
+
+        &::before {
+            content: "";
+            width: 30%;
+            height: 3px;
+            background: black;
+            border-radius: 3px;
+            position: absolute;
+            top: 0;
+        }
+        &__negative {
+            h6 {
+                color: get-color(red,0);
+            }
+            &::before {
+                background: get-color(red,0);
+            }
+        }
+        &__positive {
+            h6 {
+                color: get-color(green,0);
+            }
+            &::before {
+                background: get-color(green,0);
+            }
+        }
+    }
+
+}
 
 .footer {
     padding: 4rem 0 2rem 0;
@@ -883,7 +943,7 @@ section {
         font-size: 4rem;
     }
     @include phone {
-        padding: 6rem 0 4rem 0;
+        padding: 6rem 0 2rem 0;
         h1 {
             font-size: 2rem;
         }
@@ -949,7 +1009,39 @@ section {
     margin-bottom: 2rem;
 }
 
+.notice {
+    border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3px;
+    padding: .8rem;
 
+    &__icon {
+        font-size: 2rem;
+        margin-right: .8rem;
+    }
+    &__copy {
+        font-size: 14px;
+    }
+
+    &__warning {
+        border: 1px solid get-color(yellow,2);
+        background: get-color(yellow,5);
+
+        .notice__icon {
+            color: get-color(yellow,0);
+        }
+    }
+    &__success {
+        border: 1px solid get-color(green,2);
+        background: get-color(green,5);
+
+        .notice__icon {
+            color: get-color(green,0);
+        }
+    }
+}
 
 ////**** ANIMATIONS *****/
 
@@ -971,7 +1063,231 @@ section {
   }
 }
 
+////**** Post *****/
+.post {
+    font-size: 16px;
+    padding: 0;
+    border: 1px solid red;
+    margin-top: 4.45rem;
 
+    &__header {
+        text-align: center;
+        border: 1px solid;
+
+
+        &__title {
+            padding: 1rem 0;
+        }
+
+        &__image {
+            margin: 1rem 0;
+            background: red;
+            height: 30rem;
+
+        }
+    }
+
+    &__reading {
+
+        p {
+            margin: 1rem 0 2rem 0;
+
+            + p {
+                margin-top: 0;
+            }
+
+            a {
+                @extend .is-link;
+            }
+        }
+
+        ul {
+            margin: 2rem;
+
+            li {
+                list-style-type:disc;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+
+}
+
+////**** Events *****/
+
+.event {
+    &__header {
+        border: 2px solid get-color(dark);
+        border-radius: 3px;
+        margin-top: .5rem;
+
+        &__title {
+            padding: 2rem;
+
+            h3 {
+                font-size: 2.4rem;
+                margin-bottom: 1rem;
+            }
+
+            @include phone {
+                padding: 1rem;
+
+                h3 {
+                    font-size: 2rem;
+                }
+            }
+        }
+        &__type {
+            display: block;
+            font-size: 14px;
+            color: get-color(gray,3);
+            margin-bottom: .5rem;
+        }
+    }
+    &__photo {
+        height: 100%;
+        padding: 1rem;
+
+        @include phone {
+            height: 260px;
+        }
+
+        &__image {
+            width: 100%;
+            height: 100%;
+            @extend .inline-image;
+        }
+    }
+
+    &__speakers {
+
+        h5 {
+            font-weight: 500;
+            font-size: 14px;
+            color: get-color(gray,3);
+            text-transform: uppercase;
+            font-family: $mm-font-family;
+            margin-bottom: .5rem;
+        }
+    }
+    &__action {
+        display: flex;
+        align-items: center;
+        align-content: center;
+
+        &__date {
+            font-family: $mm-font-family-header;
+            margin-right: 2rem;
+            transition: color 300ms ease-in-out;
+            color: get-color(gray,3);
+            padding: .4rem;
+            &__day {
+                font-size: 2.4rem;
+                line-height: 2rem;
+                font-weight: 400;
+                display: block;
+
+            }
+            &__month {
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+        &__cta {
+            flex-grow: 1;
+            a {
+                width: 100%;
+                padding: 1rem;
+                text-align: center;
+                display: block;
+                background-color: get-color(green,0);
+                transition: background-color 300ms ease-in-out;
+                font-weight: 500;
+                color: get-color(white);
+                border-radius: 3px;
+
+                &:hover {
+
+                    background-color: darken(get-color(green,0), 10%);
+                }
+            }
+        }
+        &:hover {
+
+            .event__action__date {
+                color: get-color(gray,0);
+            }
+        }
+    }
+
+    &__copy {
+        margin-top: 2rem;
+    }
+}
+
+.speaker {
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        .speaker + .speaker {
+            align-items: flex-start;
+            width: 48%;
+
+            @include phone {
+                width: 100%;
+                align-items: center;
+            }
+        }
+    }
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    &__avatar {
+        flex-shrink: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: .5rem;
+    }
+
+    &__name {
+        h4 {
+            font-weight: 500;
+            font-size: .8rem;
+            font-family: $mm-font-family;
+        }
+        span {
+            display: block;
+            font-size: 12px;
+            color: get-color(gray,3);
+        }
+    }
+}
+
+.sidebar {
+    border: 2px solid get-color(dark);
+    padding: 1rem;
+    border-radius: 3px;
+
+    &__module {
+        h5 {
+            margin-bottom: 1rem;
+        }
+    }
+
+}
+.socialsharing {
+    li {
+        display: inline-block;
+        font-size: 2rem;
+        margin-right: .5rem;
+    }
+}
 ////**** Utility *****/
 
 // padding
@@ -982,4 +1298,26 @@ section {
 .is-link {
     color: get-color(blue,0);
     text-decoration: underline;
+}
+
+//Image
+.inline-image {
+    background-size: cover;
+    background-position: center center;
+    min-width: 40px;
+    min-height: 40px;
+}
+
+.social {
+    &-color {
+        &-facebook {
+            color: $mm-color-facebook;
+        }
+        &-twitter {
+            color: $mm-color-twitter;
+        }
+        &-whatsapp {
+            color: $mm-color-whatsapp;
+        }
+    }
 }

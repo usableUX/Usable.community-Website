@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <title>Usable.ng - A design community for humans by humans.</title>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-xs-5 col-3 branding">
+                    <a href="index.html">
+                        <svg class="branding__logo" viewBox="0 0 143 35" fill="none">
+                            <path
+                                d="M18.17 9.25V20.07 20.11C18.17 21.9 18.17 23.78 17.85 25.15 17.57 26.67 16.88 28 15.83 28.82 14.82 29.65 13.58 30.06 12.21 30.15 10.47 30.2 8.95 29.74 7.9 28.78 5.98 27.13 5.61 24.24 5.61 21.08V9.25H0.75V21.26C0.7 25.38 0.98 29.69 4 32.35 6.25 34.32 9 34.83 11.66 34.64 13.9 34.5 16.33 33.68 17.94 31.89L18.72 30.98V34H22.98V9.25H18.17Z"
+                                fill="#252525" />
+                            <path
+                                d="M48.78 15.85C48.19 11.22 43.83 8.56 38.38 8.56 33.43 8.56 28.8 10.99 28.8 15.8 28.8 19.38 31.18 21.35 34.58 22.31L40.17 23.87C42.41 24.51 43.97 25.2 43.97 27.13 43.97 29.33 41.86 30.47 39.25 30.47 36.18 30.47 33.57 29.14 32.92 26.3L28.02 27.08C28.98 32.4 33.29 34.69 39.07 34.69 44.66 34.69 48.92 31.94 48.92 26.9 48.92 22.77 46.22 20.94 41.36 19.7 39.34 19.2 37.97 18.83 36.78 18.46 34.76 17.91 33.61 17.09 33.61 15.62 33.61 13.83 35.72 12.69 38.47 12.78 41.27 12.87 43.47 14.15 43.88 16.72L48.78 15.85Z"
+                                fill="#252525" />
+                            <path
+                                d="M74.09 34V19.01C74.09 17.45 74 16.03 73.59 14.8 72.35 10.76 69.05 8.56 64.06 8.56 58.65 8.56 54.94 11.4 53.52 15.44L57.92 16.77C58.83 14.11 61.12 13.01 63.92 13.01 66.94 13.01 69.14 14.57 69.33 18 65.11 18.6 60.99 19.01 57.64 20.25 54.43 21.35 52.6 23.64 52.6 27.08 52.6 31.66 55.9 34.69 60.76 34.69 65.02 34.69 67.77 33.36 69.88 30.47V34H74.09ZM68.41 27.17C67.22 29.42 64.65 30.79 61.72 30.79 58.92 30.79 57.32 29.19 57.32 27.17 57.32 25.2 58.83 24.05 61.08 23.46 63.46 22.77 65.66 22.54 69.33 21.99 69.33 23.37 69.28 25.66 68.41 27.17Z"
+                                fill="#252525" />
+                            <path
+                                d="M91.61 8.56C88.86 8.56 86.56 9.43 84.87 10.95V1H80.06V34H84.32V31.71C86.11 33.59 88.58 34.69 91.7 34.69 98.62 34.69 102.93 29.05 102.93 21.63 102.93 14.15 98.57 8.56 91.61 8.56ZM91.06 30.33C86.34 30.33 84.32 26.71 84.32 21.63 84.32 16.45 86.38 12.92 90.87 12.92 95.64 12.92 97.84 16.77 97.84 21.63 97.84 26.53 95.64 30.33 91.06 30.33Z"
+                                fill="#252525" />
+                            <path d="M108.44 34V0.31H113.26V34H108.44Z" fill="#252525" />
+                            <path
+                                d="M123.9 22.95H142.38C142.83 14.52 138.85 8.56 130.87 8.56 123.45 8.56 118.77 13.88 118.77 21.85 118.77 29.33 123.54 34.69 131.15 34.69 135.82 34.69 140.13 32.17 142.01 27.72L137.33 26.21C136.1 28.82 133.8 30.15 130.87 30.15 126.65 30.15 124.27 27.4 123.9 22.95ZM130.87 12.83C135.13 12.78 136.97 15.12 137.43 19.1H124.04C124.64 15.3 126.75 12.78 130.87 12.83Z"
+                                fill="#252525" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-xs-5 col">
+                    <div class="header__navigation">
+                        <div class="d-block d-sm-none">
+                            <a id="mobileMenu" href="#" class="header__navigation__button">
+                                <div class="header__navigation__bars">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div> Menu
+                            </a>
+                        </div>
+                        <ul class="d-none d-sm-block header__navigation__menu" role="navigation" aria-label="Main Navigation">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="partnerships.html">Partnerships</a></li>
+                            <li><a href="codeofconduct.html">Code of Conduct</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12" aria-hidden="true">
+                    <ul class="header__navigation__mobile" id="mobileNavigation">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="partnerships.html">Partnerships</a></li>
+                        <li><a href="codeofconduct.html">Code of Conduct</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="post">
+        <div class="container">
+            <div class="row justify-content-around post__header">
+                <div class="col-12 col-md-7">
+                    <div class="post__header__title">
+                        <span>August 1, 2018</span>
+                        <h1>Hope is not a strategy</h1>
+                    </div>
+                    <div class="post__header__author">
+                        <div class="author__block">
+                            <div class="author__block__avatar" style="background-image:url()" class="inline-image" role="presentation"></div>
+                            <div class="author__block__name">
+                                Helder Postiga
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="post__header__image" style="background-image:url();" class="inline-image" role="presentation">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-around">
+                <div class="col-12 col-md-7">
+                    <div class="post__reading">
+                        <p>Ahead of the 2020 elections in Edo State, media is awash with the stories of a cold war between former Governor and National Chairman of the All Progressives Congress, Comrade Adams Oshiomhole and his handpicked
+                            successor, Governor
+                            Godwin Obaseki. </p>
+
+                        <pre>-ms-word-wrap: break-word; word-wrap: break-word;</pre>
+
+                        <p><strong>What Governor Obaseki is saying: </strong>The Governor has said it before that there is <a href="https://punchng.com/theres-no-rift-between-me-and-oshiomhole-says-obaseki/﻿">no rift between him and
+                                Oshiomhole</a>. After a
+                            recent closed door meeting with party officials, Obaseki also addressed the reports as untrue and a “deliberate attempt to distract” his administration. He said that the politicians driving the narrative are ”shocked
+                            by the progress
+                            of work done and the acceptance of the governor by our people.”
+
+                            <h1>Header 1</h1>
+                            <h2>Header 2</h2>
+                            <h3>Header 3</h3>
+                            <h4>Header 4</h4>
+                            <h5>Header 5</h5>
+                            <h6>Header 6</h6>
+
+                        </p>
+
+                        <ul>
+                            <li>President Buhari, leading other African leaders, got key support for many issues of concern or interest to Nigeria and African continent at the meeting. Top on the list is strong condemnation of terrorist acts. The
+                                meeting agreed that fighting terrorism is a major priority, resolving to work together to “prevent and suppress terrorist acts through strong international solidarity and cooperation in full recognition of the UN’s
+                                central role
+                                in that regard.”</li>
+                            <li>At the conclusion of the meeting, there was a resolution to support the “G5” Sahel countries (Niger, Chad, Mali, Burkina Faso and Mauritania, established in 2014) in their efforts to fight terrorism and ensure
+                                development.</li>
+                        </ul>
+
+
+                        <ol>
+                            <li>African leaders, got key support for many issues of concern or interest to Nigeria and African continent at the meeting. Top on the list is strong condemnation of terrorist acts. The meeting agreed that fighting
+                                terrorism is a major priority, resolving to work together to “prevent and suppress terrorist acts through strong international solidarity and cooperation in full recognition of the UN’s central role
+                                in that regard.”</li>
+                            <li>Pesolution to support the “G5” Sahel countries (Niger, Chad, Mali, Burkina Faso and Mauritania, established in 2014) in their efforts to fight terrorism and ensure development.</li>
+                            <li>Fight terrorism and ensure development.</li>
+                        </ol>
+
+
+                        <p>During this same event, the&nbsp;Edo State APC chairman Anselm Ojezua gave a veiled jab at politicians seeking “reward&nbsp; for political supremacy.”&nbsp; Ojezua has also maintained the no-rift position but believes
+                            that there are
+                            actors at play behind the crisis.&nbsp;</p>
+
+                        <p><strong>What we know: </strong>Both Oshiomhole and Obaseki have maintained public decorum while their foot soldiers have been waging their battles. There is definitely a cold war between both parties, with Governor
+                            Oshiomole determined
+                            to replace his successor, according to insider accounts. </p>
+                        <p>Although Oshiomhole has been relatively mum on the issue, one public hint at his displeasure with Obaseki was a <a href="https://allafrica.com/stories/201905170415.html">recent remark</a> he made at the University of
+                            Benin Teaching
+                            Hospital where he lamented the failure of the Obaseki-led government to open a ‘Five Star Hospital’ project he had completed during his tenure. </p>
+
+                        <div class="embed-wrapper">
+                            <iframe title="Pinky &amp; The Brain - What Do You Want To Do Today?" width="900" height="675" src="https://www.youtube.com/embed/mYvAYwpUDv8?feature=oembed" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                        </div>
+
+                        <p>“People elect government to make things work. That was why I decided to build what I called Five Star hospital to replace the decayed Central Hospital. I do hope that one day that hospital will open and you will see the
+                            equipment,”
+                            Oshiomhole said. </p>
+
+                        <h1>Header 1</h1>
+                        <h2>Header 2</h2>
+                        <h3>Header 3</h3>
+                        <h4>Header 4</h4>
+                        <h5>Header 5</h5>
+                        <h6>Header 6</h6>
+
+                        <p>Likewise, Governor Obaseki has made critical references to the difference in the style of his management of public revenue (as more accountable) compared to the era of his predecessor. During a <a
+                                href="https://leadership.ng/2019/05/14/well-never-go-back-to-era-of-thuggery-in-edo-says-obaseki/">recent meeting with the Nigerian Labour Congress</a>, Obaseki said:</p>
+
+                        <blockquote class="wp-block-quote">
+                            <p>“We will never go back to where we are coming from. Oredo’s monthly Internally Generated Revenue (IGR) was N7 million when I came in but today working with the union and by digitalising the process, we now earn N70
+                                million and we
+                                can do more.”<br></p>
+                        </blockquote>
+
+                        <p><strong>Obaseki is also making his own deft political moves as well, undercutting Oshiomhole’s loyalists</strong>. For example, one of the aspirants making rounds on Oshiomhole’s rumoured list to replace Obaseki,
+                            General Charles
+                            Airhiavbere, has been suspended by his local party chapter over alleged ’anti-party’ activities during the 2019 presidential elections. A state lawmaker Chris Okaeben – an Oshiomhole ally – has also accused the
+                            Governor of threats to
+                            his life. </p>
+
+                        <p><strong>One plot twist:</strong> Governor Obaseki has managed to secure the sympathies of the opposition Peoples Democratic Party (PDP). We are hearing that recent private visits and <a
+                                href="https://thenationonlineng.net/ripples-in-edo-pdp-as-chieftains-endorse-obaseki/﻿"> public endorsements of the Governor</a> by opposition leaders such as Sir Gabriel Igbinedion and Tom Ikimi might be connected
+                            with the
+                            alternative plans by the Governor should he be edged out by the pro-Oshiomhole forces. </p>
+
+                        <p>Many Africans who are not gay or bisexual – sexually attracted only to people of the same sex or of both sexes – claim that being gay or bisexual is <a
+                                href="https://www.theguardian.com/global-development/2018/mar/30/blackmail-prejudice-persecution-gay-rights-nigeria">not acceptable</a> for <a
+                                href="https://www.notizieprovita.it/wp-content/uploads/2015/12/Global_Divide_on_Homosexuality-Pew_Research_Center.pdf">religious and cultural reasons</a>. Laws in numerous African countries – as is <a
+                                href="https://journals.sagepub.com/doi/full/10.1177/1358229115591403">the case</a> in Nigeria – also reflect this by criminalising same-sex sexual activities and same-sex marriage.</p>
+
+                        <p>This cultural and legal environment increases the chances that gay and bisexual individuals <a href="https://psycnet.apa.org/record/2013-25652-002">will be discriminated against</a>. They can also face threats and
+                            physical violence. Gay and bisexual people are aware of this, and often anticipate discriminatory acts even when they are not immediately present. This may include going to great lengths to conceal their sexual
+                            orientation. </p>
+
+                        <p>Taken to the extreme, gay and bisexual people can imbibe these negative attitudes and direct them towards themselves – what’s known as internalised stigma or self-hatred. Collectively, these stressful factors increase
+                            the likelihood of mental health problems and low life-satisfaction among gay and bisexual relative to heterosexual individuals. </p>
+
+                        <p>Research has been done on how people – generally speaking – <a href="https://psycnet.apa.org/record/2012-04677-005">cope with stress </a>. The studies show that some people use helpful strategies such as seeking
+                            support. This, in turn, improves their mental health and overall wellbeing. But others take up unhelpful strategies, like drinking, which can worsen their mental health. </p>
+
+                        <p style="">Few African studies have investigated how gay and bisexual men manage minority stress. Based on this, my colleagues and I decided <a href="https://www.tandfonline.com/doi/full/10.1080/00918369.2019.1600899">to
+                                look into what the situation was among Nigerian gay and bisexual men</a>. Specifically, we set out to find out whether self-stigma affected their quality of life. We also investigated what coping strategies they
+                            adopted – both positive and negative – and how these affected them. </p>
+
+                        <h2>The findings</h2>
+
+                        <p>We asked 89 gay and bisexual Nigerian men to fill in questionnaires that asked them about self-stigma due to being gay and bisexual, quality of life and the coping strategies they used.</p>
+
+                        <p>We found that the men in our study were more likely to use positive – or helpful – coping strategies rather than negative ones. These included accepting things as they were – in other words they accepted their sexual
+                            orientation and adopted a positive attitude towards it. Strategies like this were also associated with better quality of life.</p>
+
+                        <p>But there were also those in our study who had adopted unhelpful strategies. These included smoking and drinking. These, in turn, were associated with poorer quality of life.</p>
+
+                        <p>Other studies <a href="https://www.tandfonline.com/doi/abs/10.1080/00377317.2013.746920">have shown</a> that higher levels of stress in situations like this were often associated with more mental health problems and
+                            poor quality of life.</p>
+
+                        <p>Our findings, however, weren’t as straightforward. Overall, self-stigma was associated with poor quality of life, but when the level of self-stigma was low, its effects were offset by using positive strategies. However,
+                            when the levels of self-stigma were high, the positive strategies could not offset the associated poor quality of life. </p>
+
+                        <h2>Implications</h2>
+
+                        <p>These findings tell us that gay and bisexual men in Nigeria who have low levels of self-stigma and have adopted positive coping strategies can maintain a good quality of life. This means that one way of helping gay and
+                            bisexual men – in Nigeria as well as in other African countries – is to teach them positive strategies. These include accepting themselves for who they are and seeing the positive aspects of being gay or bisexual. This
+                            can be done by counsellors, therapists, psychologists, psychiatrists or other medical specialists. </p>
+
+                        <p>However, these strategies don’t work when the levels of self-stigma are high. This highlights the need to identify factors that can increase self-stigma. These are likely to be connected to the negative attitudes that
+                            predominate in many African societies. </p>
+
+                        <p>This calls for a positive change in the attitude towards gay and bisexual individuals. It also calls for a change in punitive legislation, and positive additions such as laws to protect gay and bisexual individuals from
+                            being discriminated against.
+                            <!-- Below is The Conversation's page counter tag. Please DO NOT REMOVE. --><img src="https://counter.theconversation.com/content/117121/count.gif?distributor=republish-lightbox-basic" alt="The Conversation" width="1"
+                                height="1"
+                                style="border: none !important; box-shadow: none !important; margin: 0 !important; max-height: 1px !important; max-width: 1px !important; min-height: 1px !important; min-width: 1px !important; opacity: 0 !important; outline: none !important; padding: 0 !important; text-shadow: none !important">
+                            <!-- End of code. If you don't see any code above, please get new code from the Advanced tab after you click the republish button. The page counter does not collect any personal data. More info: http://theconversation.com/republishing-guidelines -->
+                        </p>
+
+                        <p>This article is republished from <a href="http://theconversation.com">The Conversation</a> under a Creative Commons license. Read the <a
+                                href="https://theconversation.com/how-do-nigerian-gay-and-bisexual-men-cope-this-is-what-they-told-us-117121">original article</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div id="contact" class="col-md-8">
+                    <div class="row no-gutters align-items-center footer__contact">
+                        <div class="col-md-8">
+                            <div class="footer__contact__copy">
+                                <span>Contact Us</span>
+                                Got an idea/question/feedback or want to sponsor our next community activity?
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="footer__contact__method">
+                                <i class="las la-envelope"></i>
+                                <span>info</span><span>&lt;at&gt;</span><span>usable.ng</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 col-md-4">
+                    <div class="footer__menu">
+                        <h3>Menu</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="partnerships.html">Partnerships</a></li>
+                            <li><a href="codeofconduct.html">Code of Conduct</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="footer__social">
+                        <h3>Connect on social</h3>
+                        <ul>
+                            <li class="footer__social__twitter">
+                                <a href="" target="_blank"><i class="lab la-twitter"></i></a>
+                            </li>
+                            <li class="footer__social__facebook">
+                                <a href="" target="_blank"><i class="lab la-facebook-square"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col footer__support">
+                    <div class="footer__support__handmade">
+                        <span>&copy; 2020 Usable.</span> Handmade with <i class="las la-heart"></i> in Lagos
+                    </div>
+
+
+                    <div class="footer__support__credit">
+                        Supported by your friends @ <a href="#" target="_blank">FHxH</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/jQuery.js"></script>
+    <script async src="js/analytics.js"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+</body>
+
+</html>
