@@ -76,7 +76,4 @@
 
             </div>
         </header>
-
-		<?php if (is_front_page()){ ?>
-			<h2> I am Home </h2>
-		<?php } ?>
+		

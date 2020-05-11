@@ -1,5 +1,43 @@
 <?php /* Template Name: Code of Conduct Template */ get_header(); ?>
 
+	<section class="page__header">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<span class="page__header__title">
+						Code of Conduct
+					</span>
+					<h1>
+						It's simple, don't be an ass.
+					</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="page p-t-0">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5">
+					<p>We believe that for us to have a healthy community, we need an environment where people are comfortable with sharing ideas, asking questions and expressing themselves without being silenced, bullied or shouted down. So, for the good of everyone, we have created a set of rules which we hope will serve as guidelines for both new members and existing members.</p>
+
+					<div class="notice notice__warning">
+						<div class="notice__icon">
+							<i class="las la-exclamation-triangle"></i>
+						</div>
+						<div class="notice__copy">
+							Community moderators reserve the right to remove any content considered inappropriate. This can happen without notice/warning.
+						</div>
+					</div>
+
+				</div>
+				<div class="col-12 col-md-7">
+
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<section class="page">
 		<div class="container">
 			<div class="row">

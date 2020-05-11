@@ -1,5 +1,20 @@
 <?php /* Template Name: Partnerships Template */ get_header(); ?>
 
+<section class="page__header">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<span class="page__header__title">
+					Code of Conduct
+				</span>
+				<h1>
+					Our partners play a critical role in helping Usable facilitate many human connections.
+				</h1>
+			</div>
+		</div>
+	</div>
+</section>
+
 	<section class="p-t-0 page">
 		<div class="container">
 			<div class="row">

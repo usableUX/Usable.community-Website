@@ -1,5 +1,20 @@
 <?php /* Template Name: About Page Template */ get_header(); ?>
 
+	<section class="page__header">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<span class="page__header__title">
+						About Us
+					</span>
+					<h1>
+						Usable is more than just a community, it is our safe place.
+					</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<section class="p-t-0 page">
 		<div class="container">
 			<div class="row">
@@ -188,5 +203,5 @@
 			</div>
 		</div>
 	</section>
-	
+
 <?php get_footer(); ?>
