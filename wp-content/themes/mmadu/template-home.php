@@ -18,6 +18,7 @@
 					<div class="landing__action">
 						<a href="#community" class="button">Join the Community</a>
 					</div>
+					
 					<div class="landing__ticker" role="presentation" aria-hidden="true">
 						<h6>Some topics we talk about</h6>
 

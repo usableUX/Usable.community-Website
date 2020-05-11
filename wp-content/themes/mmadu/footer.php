@@ -62,6 +62,29 @@
 
 		<?php wp_footer(); ?>
 
+		<?php if (is_front_page()){ ?>
+			<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+			<!-- If homepage. Run Typed -->
+			<script type="text/javascript">
+				var options = {
+					stringsElement: '#landing__ticker__pool',
+					smartBackspace: true,
+					typeSpeed: 80,
+					showCursor: false,
+					backSpeed: 40,
+					backDelay: 1200,
+					startDelay: 500,
+					loop: true,
+				};
+
+				const el = document.querySelector('.landing__ticker__slot');
+				if (el) {
+				  new Typed('.landing__ticker__slot', options);
+				}
+
+			</script>
+		<?php } ?>
+		
 		<!-- analytics -->
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

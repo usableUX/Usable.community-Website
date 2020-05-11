@@ -11,19 +11,13 @@
 
 
 	$(function () {
-
 		'use strict';
 
 		// DOM ready, take it away
-
 		$('.header__navigation__button').on('click', function(e){
 	        e.preventDefault();
 	        $('.header__navigation__mobile, .header__navigation__bars, .header__navigation__button').toggleClass('is-active')
 	    });
-
-	    // if (typeof Typed == 'function') {
-	    //   var typed = new Typed('.landing__ticker__slot', options);
-	    // }
 
 		$('a[href*="#"]')
 	        // Remove links that don't actually link to anything

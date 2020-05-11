@@ -100,15 +100,7 @@ function html5blank_header_scripts()
 
         wp_register_script('site_scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('site_scripts'); // Enqueue it!
-    }
-}
 
-// Load HTML5 Blank conditional scripts
-function html5blank_conditional_scripts()
-{
-    if (is_page('pagenamehere')) {
-        wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
-        wp_enqueue_script('scriptname'); // Enqueue it!
     }
 }
 
@@ -335,19 +327,37 @@ function html5blankcomments($comment, $args, $depth)
 	<?php endif; ?>
 <?php }
 
+//Disable Emoji Icons
+function disable_wp_emojicons() {
+
+  // all actions related to emojis
+  remove_action( 'admin_print_styles', 'print_emoji_styles' );
+  remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+  remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+  remove_action( 'wp_print_styles', 'print_emoji_styles' );
+  remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+  remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+  remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+
+  // filter to remove TinyMCE emojis
+  add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
+}
+
+
 /*------------------------------------*\
 	Actions + Filters + ShortCodes
 \*------------------------------------*/
 
 // Add Actions
 add_action('init', 'html5blank_header_scripts'); // Add Custom Scripts to wp_head
-add_action('wp_print_scripts', 'html5blank_conditional_scripts'); // Add Conditional Page Scripts
+//add_action('wp_print_scripts', 'html5blank_conditional_scripts'); // Add Conditional Page Scripts
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'html5blank_styles'); // Add Theme Stylesheet
 add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
 add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
+add_action( 'init', 'disable_wp_emojicons' ); //Disable emojicons
 
 // Remove Actions
 remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds

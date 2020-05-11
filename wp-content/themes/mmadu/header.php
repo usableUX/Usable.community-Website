@@ -11,15 +11,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
 		<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 		<link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
         <link href="<?php echo get_template_directory_uri(); ?>/img/icons/apple-touch-icon.png" rel="apple-touch-icon-precomposed">
-
-
-
-
 
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website">
@@ -35,8 +30,8 @@
 		<meta property="twitter:description" content="Usable.ng | We are a community of humans who are interested in building beautiful & functional products.">
 		<meta property="twitter:image" content="<?php echo get_template_directory_uri(); ?>/img/usable-social-photo.jpg">
 
-		<?php wp_head(); ?>
 
+		<?php wp_head(); ?>
 
 	</head>
 
@@ -81,3 +76,7 @@
 
             </div>
         </header>
+
+		<?php if (is_front_page()){ ?>
+			<h2> I am Home </h2>
+		<?php } ?>
