@@ -1,0 +1,1 @@
+var options={stringsElement:"#landing__ticker__pool",smartBackspace:!0,typeSpeed:80,showCursor:!1,backSpeed:40,backDelay:1200,startDelay:500,loop:!0};$(document).ready((function(){}));

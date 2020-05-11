@@ -55,7 +55,7 @@ if (function_exists('add_theme_support'))
     add_theme_support('automatic-feed-links');
 
     // Localisation Support
-    load_theme_textdomain('html5blank', get_template_directory() . '/languages');
+    //load_theme_textdomain('html5blank', get_template_directory() . '/languages');
 }
 
 /*------------------------------------*\
@@ -98,8 +98,8 @@ function html5blank_header_scripts()
         wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
         wp_enqueue_script('modernizr'); // Enqueue it!
 
-        wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
-        wp_enqueue_script('html5blankscripts'); // Enqueue it!
+        wp_register_script('site_scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
+        wp_enqueue_script('site_scripts'); // Enqueue it!
     }
 }
 
@@ -115,11 +115,11 @@ function html5blank_conditional_scripts()
 // Load HTML5 Blank styles
 function html5blank_styles()
 {
-    wp_register_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '1.0', 'all');
-    wp_enqueue_style('normalize'); // Enqueue it!
+    wp_register_style('grid', get_template_directory_uri() . '/css/bootstrap-grid.min.css', array(), '1.0', 'all');
+    wp_enqueue_style('grid'); // Enqueue it!
 
-    wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
-    wp_enqueue_style('html5blank'); // Enqueue it!
+    wp_register_style('site_style', get_template_directory_uri() . '/css/app.css', array(), '1.0', 'all');
+    wp_enqueue_style('site_style'); // Enqueue it!
 }
 
 // Register HTML5 Blank Navigation
@@ -172,27 +172,27 @@ function add_slug_to_body_class($classes)
 // If Dynamic Sidebar Exists
 if (function_exists('register_sidebar'))
 {
-    // Define Sidebar Widget Area 1
-    register_sidebar(array(
-        'name' => __('Widget Area 1', 'html5blank'),
-        'description' => __('Description for this widget-area...', 'html5blank'),
-        'id' => 'widget-area-1',
-        'before_widget' => '<div id="%1$s" class="%2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
-
-    // Define Sidebar Widget Area 2
-    register_sidebar(array(
-        'name' => __('Widget Area 2', 'html5blank'),
-        'description' => __('Description for this widget-area...', 'html5blank'),
-        'id' => 'widget-area-2',
-        'before_widget' => '<div id="%1$s" class="%2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
+    // // Define Sidebar Widget Area 1
+    // register_sidebar(array(
+    //     'name' => __('Widget Area 1', 'html5blank'),
+    //     'description' => __('Description for this widget-area...', 'html5blank'),
+    //     'id' => 'widget-area-1',
+    //     'before_widget' => '<div id="%1$s" class="%2$s">',
+    //     'after_widget' => '</div>',
+    //     'before_title' => '<h3>',
+    //     'after_title' => '</h3>'
+    // ));
+    //
+    // // Define Sidebar Widget Area 2
+    // register_sidebar(array(
+    //     'name' => __('Widget Area 2', 'html5blank'),
+    //     'description' => __('Description for this widget-area...', 'html5blank'),
+    //     'id' => 'widget-area-2',
+    //     'before_widget' => '<div id="%1$s" class="%2$s">',
+    //     'after_widget' => '</div>',
+    //     'before_title' => '<h3>',
+    //     'after_title' => '</h3>'
+    // ));
 }
 
 // Remove wp_head() injected Recent Comment styles

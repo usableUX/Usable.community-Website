@@ -6,15 +6,16 @@
 		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
 		<meta name="title" content="<?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?>">
 		<meta name="description" content="<?php wp_title(''); ?> | <?php bloginfo('description'); ?>">
-		
+
 		<!-- Set Viewport for Mobile Responsiveness -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link href="//www.google-analytics.com" rel="dns-prefetch">
 
+		<link href="//www.google-analytics.com" rel="dns-prefetch">
+		<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 		<link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
-        <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
+        <link href="<?php echo get_template_directory_uri(); ?>/img/icons/apple-touch-icon.png" rel="apple-touch-icon-precomposed">
 
 
 

@@ -1,53 +1,14 @@
-<?php /* Template Name: Home Page Template */ get_header(); ?>
+<?php /* Template Name: About Page Template */ get_header(); ?>
 
-	<section class="landing">
+	<section class="p-t-0 page">
 		<div class="container">
-			<div class="row justify-content-between">
-				<div class="col-md-5">
-					<div class="landing__copy">
-						<h1 class="landing__copy__title">
-							<span>A design</span>
-							<span> community for</span>
-							<span>humans by humans</span>
-						</h1>
-
-						<p class="landing__copy__story">
-							We are a community of humans who are interested in building products that are both beautiful and functional.
-						</p>
-					</div>
-					<div class="landing__action">
-						<a href="#community" class="button">Join the Community</a>
-					</div>
-					<div class="landing__ticker" role="presentation" aria-hidden="true">
-						<h6>Some topics we talk about</h6>
-
-						<div class="landing__ticker__slot" role="presentation" aria-hidden="true"></div>
-
-						<span id="landing__ticker__pool" class="d-none">
-							<span>The business impact of design; </span>
-							<span>How to design inclusive products; </span>
-							<span>The adjacent UX career paths; </span>
-							<span>User research; </span>
-							<span>How to convince stakeholders in your organisation; </span>
-							<span>How to get started as a UX designer; </span>
-							<span>Design thinking; </span>
-							<span>Copywriting: The design of copy.</span>
-						</span>
-					</div>
-
-				</div>
-				<div class="col-md-6 ml-auto" aria-hidden="true">
-					<div class="landing__grid">
-						<div class="grid__wrapper">
-							<div class="grid__item grid__photo__p1"></div>
-							<div class="grid__item grid__photo__p2"></div>
-							<div class="grid__item grid__photo__p3"></div>
-							<div class="grid__item grid__photo__p4"></div>
-							<div class="grid__item grid__photo__p5"></div>
-						</div>
-					</div>
+			<div class="row">
+				<div class="col-12 col-md-6">
+					<p>Our conversations go beyond look & feel - aesthetics. Together, we explore topics around design thinking, the business impact of design, inclusive design, promoting UX talents and recognizing adjacent UX career paths including UX Researcher & Copywriting.</p>
+					<p>Usable is more than just a community, it is our safe place. We are humans who meet up monthly to talk about UX design and everything related to it: interaction design, visual design, and user research, sketching and prototyping.   We are a community of 2000+ members with over 40 meetups in two cities; Lagos and Abuja.   We have mentorship programs designed to help you hone your skills, navigate your career and build your network.   We are interested in design but more than that we come together to learn and share.  </p>
 				</div>
 			</div>
+
 		</div>
 	</section>
 
@@ -173,63 +134,59 @@
 		</div>
 	</section>
 
-	<section class="updates">
+	<section class="team">
 		<div class="container">
-			<div class="row">
-				<div class="col-12 snippet__header">
-					<h2 class="snippet__header__title">Community Updates</h2>
-					<p class="snippet__header__subtitle">Showcase of our upcoming and past events. <a href="#">See all events</a></p>
+			<div class="row justify-content-between">
+				<div class="col col-sm-4">
+					<div class="section__title">
+						<h1>Our Team</h1>
+						<p class="section__title__subtitle">Usable is brought to you by humans who devote time and energy to bring these to you</p>
+					</div>
 				</div>
 
-
-				<div class="w-100"></div>
-
-				<div class="col-md-4">
-					<a href="update-type-event.html" class="updates__item">
-						<div class="updates__item__title updates__type__event">
-							<span class="updates__item__type">Event (Workshop)</span>
-							<h3>A Design Matters illustrated talk for your organisation</h3>
-							<span class="updates__item__source">Andrey Haimershmuck</span>
+				<div class="col-12 col-md-7">
+					<div class="team__tile">
+						<div class="team__tile__item">
+							<div class="team__tile__item__avatar"
+								style="background-image: url("https://thispersondoesnotexist.com/image");"
+							></div>
+							<div class="team__tile__item__name">'Lade</div>
 						</div>
-						<div class="updates__item__meta event__date">
-							<span class="event__date__day">19</span>
-							<span class="event__date__month">December</span>
+						<div class="team__tile__item">
+							<div class="team__tile__item__avatar"
+								style="background-image:url('https://static.diverseui.com/male-8.jpg')"
+							></div>
+							<div class="team__tile__item__name">Kene</div>
+						</div>
+						<div class="team__tile__item">
+							<div class="team__tile__item__avatar"
+								style="background-image:url('https://static.diverseui.com/female-12.jpg')"
+							></div>
+							<div class="team__tile__item__name">Eniola</div>
+						</div>
+						<div class="team__tile__item">
+							<div class="team__tile__item__avatar"
+								style="background-image:url('https://static.diverseui.com/male-2.jpg')"
+							></div>
+							<div class="team__tile__item__name">Early</div>
 						</div>
 
-						<i class="las la-long-arrow-alt-right"></i>
-
-					</a>
+						<div class="team__tile__item">
+							<div class="team__tile__item__avatar"
+								style="background-image:url('https://static.diverseui.com/male-19.jpg')"
+							></div>
+							<div class="team__tile__item__name">Gabriel</div>
+						</div>
+						<div class="team__tile__item">
+							<div class="team__tile__item__avatar"
+								style="background-image:url('https://static.diverseui.com/male-1.jpg')"
+							></div>
+							<div class="team__tile__item__name">Eniola</div>
+						</div>
+					</div>
 				</div>
-				<div class="col-md-4">
-					<a href="update-type-post.html" class="updates__item">
-						<div class="updates__item__title updates__type__post">
-							<span class="updates__item__type">Blog Post</span>
-							<h3>Hope is not a strategy.</h3>
-							<span class="updates__item__source">Jumaima Gerhart</span>
-						</div>
-
-						<i class="las la-long-arrow-alt-right"></i>
-					</a>
-				</div>
-				<div class="col-md-4">
-					<a href="update-type-event.html" class="updates__item">
-						<div class="updates__item__title updates__type__event">
-							<span class="updates__item__type">Meetup</span>
-							<h3>Connecting with your inner zen and opportunities to kick ass</h3>
-							<span class="updates__item__source">Dayot Upenmecano & Celeste Agroa</span>
-						</div>
-						<div class="updates__item__meta event__date">
-							<span class="event__date__day">31</span>
-							<span class="event__date__month">January</span>
-						</div>
-						<i class="las la-long-arrow-alt-right"></i>
-					</a>
-				</div>
-				<div class="w-100"></div>
-
 			</div>
 		</div>
 	</section>
-
-
+	
 <?php get_footer(); ?>
