@@ -353,7 +353,6 @@ function disable_emojicons_tinymce( $plugins ) {
   }
 }
 
-
 /*------------------------------------*\
 	Actions + Filters + ShortCodes
 \*------------------------------------*/
