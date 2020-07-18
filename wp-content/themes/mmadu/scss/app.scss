@@ -298,12 +298,17 @@ section {
     &__photo {
 
         position: relative;
+
         &__p1 {
             grid-column: 1 / span 6;
             grid-row:1/ span 9;
             background-color: get-color(yellow,5);
             background-image: url(../img/p1.png);
             background-size: cover;
+
+            @include phone {
+                grid-row: 1/ span 7;
+            }
         }
         &__p2 {
             grid-column: 1 / span 6;
@@ -312,6 +317,11 @@ section {
             margin-top: 10px;
             background-image: url(../img/p2.png);
             background-size: cover;
+            background-position: center center;
+
+            @include phone {
+                grid-row: 8/ span 13;
+            }
         }
         &__p3 {
             grid-column: 7 / span 11;
@@ -340,6 +350,7 @@ section {
             margin-top: 10px;
             background-image: url(../img/p5.png);
             background-size: cover;
+            background-position: center center;
         }
 
     }
@@ -1069,22 +1080,30 @@ section {
 .post {
     font-size: 16px;
     padding: 0;
-    border: 1px solid red;
-    margin-top: 4.45rem;
+    margin-top: 2rem;
 
     &__header {
         text-align: center;
-        border: 1px solid;
 
 
         &__title {
-            padding: 1rem 0;
+            padding: 2rem 0;
+
+            @include phone {
+                font-size: 12px;
+            }
+
         }
 
         &__image {
-            margin: 1rem 0;
-            background: red;
             height: 30rem;
+            background-size: cover;
+            background-position: center center;
+            margin-bottom: 2rem;
+
+            @include phone {
+                height: 250px;
+            }
 
         }
     }

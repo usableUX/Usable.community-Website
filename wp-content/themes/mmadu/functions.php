@@ -341,6 +341,16 @@ function disable_wp_emojicons() {
 
   // filter to remove TinyMCE emojis
   add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
+  // Remove the emojicon DNS prefetch 
+  add_filter( 'emoji_svg_url', '__return_false' );
+}
+
+function disable_emojicons_tinymce( $plugins ) {
+  if ( is_array( $plugins ) ) {
+    return array_diff( $plugins, array( 'wpemoji' ) );
+  } else {
+    return array();
+  }
 }
 
 
