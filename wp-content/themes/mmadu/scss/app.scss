@@ -572,7 +572,7 @@ section {
 
             }
             &__month {
-                font-size: 14px;
+                font-size: 1rem;
 
             }
         }
@@ -1025,6 +1025,23 @@ section {
 
 .snippet__header {
     margin-bottom: 2rem;
+    position: relative;
+
+    &__subtitle{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        a {
+            color: get-color(blue,0);
+            text-decoration: underline;
+
+            @include phone {
+                margin-top: .5rem;
+            }
+        }
+
+    }
 }
 
 .notice {
@@ -1151,6 +1168,7 @@ section {
         padding: 0;
         position: relative;
         overflow: hidden;
+        margin-bottom: 2rem;
 
         &::after {
             content: "";
@@ -1299,115 +1317,6 @@ section {
 
     }
 
-
-    &__header {
-        border: 2px solid get-color(dark);
-        border-radius: 3px;
-        margin-top: .5rem;
-
-        &__title {
-            padding: 1.5rem;
-
-            h3 {
-                font-size: 2.4rem;
-                margin-bottom: 1rem;
-            }
-
-            @include phone {
-                padding: 1rem;
-
-                h3 {
-                    font-size: 2rem;
-                }
-            }
-        }
-        &__type {
-            display: block;
-            font-size: 14px;
-            color: get-color(gray,3);
-            margin-bottom: .5rem;
-            font-weight: 500;
-        }
-    }
-    &__photo {
-        height: 100%;
-        padding: 1rem;
-        min-height: 540px;
-
-        @include phone {
-            height: 260px;
-        }
-
-        &__image {
-            width: 100%;
-            height: 100%;
-            @extend .inline-image;
-        }
-    }
-
-    &__speakers {
-
-        h5 {
-            font-weight: 500;
-            font-size: 14px;
-            color: get-color(gray,3);
-            font-family: $mm-font-family;
-            margin: 1rem 0;
-        }
-    }
-    &__action {
-        display: flex;
-        align-items: center;
-        align-content: center;
-
-        &__date {
-            font-family: $mm-font-family-header;
-            margin-right: 2rem;
-            transition: color 300ms ease-in-out;
-            color: get-color(gray,3);
-            padding: .4rem;
-            &__day {
-                font-size: 2.4rem;
-                line-height: 2rem;
-                font-weight: 400;
-                display: block;
-
-            }
-            &__month {
-                font-size: 14px;
-                font-weight: 500;
-            }
-        }
-        &__cta {
-            flex-grow: 1;
-            a {
-                width: 100%;
-                padding: 1rem;
-                text-align: center;
-                display: block;
-                background-color: get-color(green,0);
-                transition: background-color 300ms ease-in-out;
-                font-weight: 500;
-                color: get-color(white);
-                border-radius: 3px;
-
-                &:hover {
-
-                    background-color: darken(get-color(green,0), 10%);
-                }
-            }
-        }
-        &:hover {
-
-            .event__action__date {
-                color: get-color(gray,0);
-            }
-        }
-    }
-
-    &__copy {
-        margin-top: 2rem;
-    }
 }
 
 .sidebar {

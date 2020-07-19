@@ -18,7 +18,11 @@
         <div class="row">
             <div class="col-12 snippet__header">
                 <h2 class="snippet__header__title">Community Updates</h2>
-                <p class="snippet__header__subtitle">Showcase of our upcoming and past events. <a href="#">See all events</a></p>
+                <p class="snippet__header__subtitle">Showcase of our upcoming and past events.
+
+                    <!-- <a href="#">See all events</a> -->
+
+                </p>
             </div>
 
 
