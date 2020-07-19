@@ -94,9 +94,19 @@
 	                            <div class="socialsharing">
 	                                <h5>Share with friends</h5>
 	                                <ul>
-	                                    <li><a href="" class="social-color-facebook"><i class="lab la-facebook"></i></a></li>
-	                                    <li><a href="" class="social-color-facebook"><i class="lab la-twitter"></i></a></li>
-	                                    <li><a href="" class="social-color-whatsapp"><i class="lab la-whatsapp"></i></a></li>
+
+
+
+	                                    <li>
+											<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_permalink(); ?>&quote="
+												class="social-color-facebook" target="_blank"><i class="lab la-facebook"></i></a>
+										</li>
+
+	                                    <li><a href="https://twitter.com/intent/tweet?url=<?php echo get_permalink(); ?>&text=<?php get_the_title(); ?>&via=usable_"
+											class="social-color-facebook" target="_blank"><i class="lab la-twitter"></i></a></li>
+
+	                                    <li class="d-inline-block d-sm-none"><a href="whatsapp://send?text=<?php get_the_title(); ?> <?php echo get_permalink(); ?>"
+											class="social-color-whatsapp" target="_blank"><i class="lab la-whatsapp"></i></a></li>
 	                                </ul>
 	                            </div>
 	                        </div>
