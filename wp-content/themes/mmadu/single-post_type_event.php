@@ -25,7 +25,7 @@
 								<div class="eventHeader__meta">
 									<div class="eventHeader__meta__item">
 										<i class="lar la-calendar"></i>
-										<span class="eventHeader__meta__date">June 12, 2012 @ 74:00AM </span>
+										<span class="eventHeader__meta__date"><?php the_field('event_date'); ?> </span>
 									</div>
 									<div class="eventHeader__meta__item">
 										<i class="las la-map-marker-alt"></i>
