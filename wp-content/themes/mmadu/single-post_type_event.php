@@ -11,7 +11,16 @@
 
 						<div class="col-sm-4">
 							<div class="eventHeader__information">
-								<div class="eventHeader__category">Event (Workshop)</div>
+
+								<div class="eventHeader__category">
+									<?php
+										$categories = get_the_category();
+
+										if ( ! empty( $categories ) ) {
+										    echo esc_html( $categories[0]->name );
+										}
+									?>
+								</div>
 								<h3 class="eventHeader__title"><?php the_title(); ?></h3>
 								<div class="eventHeader__meta">
 									<div class="eventHeader__meta__item">
@@ -29,7 +38,7 @@
 
 									<?php
 									$rsvp_link = get_field('rsvp_link');
-									
+
 									if( $rsvp_link ):
 									    $rsvp_link_url = $rsvp_link['url'];
 									    $rsvp_link_title = $rsvp_link['title'];

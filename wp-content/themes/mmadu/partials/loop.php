@@ -11,9 +11,9 @@
 				?>
 			</span>
 			<h3><?php the_title(); ?></h3>
-			<span class="updates__item__source">
+			<!-- <span class="updates__item__source">
 				<<< Andrey Haimershmuck >>>
-			</span>
+			</span> -->
 		</div>
 		<div class="updates__item__meta event__date">
 			<span class="event__date__day">19</span>
