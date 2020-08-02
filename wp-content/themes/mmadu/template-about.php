@@ -1,5 +1,4 @@
 <?php /* Template Name: About Page Template */ get_header(); ?>
-
 	<section class="page__header">
 		<div class="container">
 			<div class="row">
@@ -14,7 +13,6 @@
 			</div>
 		</div>
 	</section>
-
 	<section class="p-t-0 page">
 		<div class="container">
 			<div class="row">
@@ -26,7 +24,6 @@
 
 		</div>
 	</section>
-
 	<section id="community" class="community">
 		<div class="container">
 			<div class="row">
@@ -37,8 +34,6 @@
 							<p>Become one of 2000+ humans to join our community and get access to member events.   Connect in-person, uncover insights, share stories, discuss trends and find opportunities. </p>
 							<p>By signing up, you will: </p>
 						</div>
-
-
 						<div class="community__program">
 							<div class="community__program__item">
 								<div class="community__program__item__icon">
@@ -78,7 +73,6 @@
 			</div>
 		</div>
 	</section>
-
 	<section class="team">
 		<div class="container">
 			<div class="row justify-content-between">
@@ -133,5 +127,4 @@
 			</div>
 		</div>
 	</section>
-
 <?php get_footer(); ?>
