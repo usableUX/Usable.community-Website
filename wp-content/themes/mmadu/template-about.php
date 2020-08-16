@@ -24,55 +24,9 @@
 
 		</div>
 	</section>
-	<section id="community" class="community">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-5">
-					<div class="community__program__wrapper">
-						<div class="group__title">
-							<h1>Our community</h1>
-							<p>Become one of 2000+ humans to join our community and get access to member events.   Connect in-person, uncover insights, share stories, discuss trends and find opportunities. </p>
-							<p>By signing up, you will: </p>
-						</div>
-						<div class="community__program">
-							<div class="community__program__item">
-								<div class="community__program__item__icon">
-									<i class="las la-check-circle"></i>
-								</div>
-								<div class="community__program__item__copy">
-									<h5>Access online & offline community</h5>
-									<p>Get invited to the online community. Join other designers, teach, learn, share stories, discuss trends and find opportunities. You'll also get notified about our next physical event in your city. </p>
-								</div>
-							</div>
-							<div class="community__program__item">
-								<div class="community__program__item__icon">
-									<i class="las la-check-circle"></i>
-								</div>
-								<div class="community__program__item__copy">
-									<h5>Learn, network and grow</h5>
-									<p>Access to our member events and other support programs aimed at helping to accelerate your design career. You'll also find new such as mentorship program.....<< designed to support the careers of UX talents, to help them build connections and skills for growth. >>> </p>
-									<a href="#">Learn More <i class="las la-arrow-right"></i></a>
-								</div>
-							</div>
-							<div class="community__program__item">
-								<div class="community__program__item__icon">
-									<i class="las la-check-circle"></i>
-								</div>
-								<div class="community__program__item__copy">
-									<h5>Access to opportunities</h5>
-									<p>Priority access to design workshops and be the first to know about opportunities to stay ahead and advance your career when you become part of the human community. </p>
-									<a href="#">Learn More <i class="las la-arrow-right"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 ml-auto">
-					<?php get_template_part('partials/community-form'); ?>
-				</div>
-			</div>
-		</div>
-	</section>
+
+	<?php get_template_part('partials/block-community'); ?>
+
 	<section class="team">
 		<div class="container">
 			<div class="row justify-content-between">

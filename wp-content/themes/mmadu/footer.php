@@ -36,10 +36,10 @@
 							<h3>Connect on social</h3>
 							<ul>
 								<li class="footer__social__twitter">
-									<a href="" target="_blank"><i class="lab la-twitter"></i></a>
+									<a href="https://twitter.com/usable_" target="_blank"><i class="lab la-twitter"></i></a>
 								</li>
 								<li class="footer__social__facebook">
-									<a href="" target="_blank"><i class="lab la-facebook-square"></i></a>
+									<a href="https://www.facebook.com/weareusable" target="_blank"><i class="lab la-facebook-square"></i></a>
 								</li>
 							</ul>
 						</div>
@@ -84,7 +84,7 @@
 
 			</script>
 		<?php } ?>
-		
+
 		<!-- analytics -->
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

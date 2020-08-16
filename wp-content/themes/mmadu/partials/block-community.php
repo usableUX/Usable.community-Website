@@ -31,7 +31,7 @@
                                 <p>You’ll join 2000+ other Humans with diverse backgrounds and career paths. This is a great opportunity to learn something new & collaborate.</p>
                             </div>
                         </div>
-                        <div class="community__program__item">
+                        <!-- <div class="community__program__item">
                             <div class="community__program__item__icon">
                                 <i class="las la-check-circle"></i>
                             </div>
@@ -39,7 +39,7 @@
                                 <h5>Online Community</h5>
                                 <p>Join other members in our member-only Workplace group. Connect, network and share your work for actionable feedback.</p>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="community__program__item">
                             <div class="community__program__item__icon">
                                 <i class="las la-check-circle"></i>
@@ -49,7 +49,7 @@
                                 <p>Get access to mentors through our mentorship program. If you want to help others kickstart their career as a mentor, send us a quick email. </p>
                             </div>
                         </div>
-                        <div class="community__program__item">
+                        <!-- <div class="community__program__item">
                             <div class="community__program__item__icon">
                                 <i class="las la-check-circle"></i>
                             </div>
@@ -57,7 +57,7 @@
                                 <h5>Job Board</h5>
                                 <p>Be the first to know about the next job opportunity to take your career to the next level.</p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
