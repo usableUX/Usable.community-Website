@@ -1,0 +1,100 @@
+/*
+    Color Map for generating color variables and a mixin for getting the color.
+
+    @mixin get-color();
+*/
+
+$mm-colors: (
+    black: #000000,
+    white: #FFFFFF,
+    gray: (
+        0:#121212,
+        1:#3A3A3A,
+        2:#616161,
+        3:#898989,
+        4:#B0B0B0,
+        5:#D8D8D8
+    ),
+    blue: (
+        0:#003CBF,
+        1:#0047e2,
+        2:#407CFF,
+        3:#6092FF,
+        4:#95B6FF,
+        5:#E8EFFF
+    ),
+    red: (
+        0:#EA0706,
+        1:#F92524,
+        2:#FB504F,
+        3:#FC7C7B,
+        4:#FDA8A7,
+        5:#FED3D3
+    ),
+    green: (
+        0:#17C63D,
+        1:#27E651,
+        2:#52EB74,
+        3:#7EF096,
+        4:#A9F5B9,
+        5:#D4FADC
+    ),
+    yellow: (
+        0:#FCC41B,
+        1:#FDCE41,
+        2:#FDD867,
+        3:#FEE28D,
+        4:#FEEBB3,
+        5:#FEF5D9
+    )
+);
+
+
+// Mixin for colors
+@function get-color($color, $shade: null){
+    /*
+      This is not fool proof as if someone enters get-color(\white,0). It'll throw an error.
+      [TODO]:
+      - Catch non map exceptions like in the case of {\black & \white}
+    */
+
+
+    @if ($shade != null) {
+      @return map-get(map-get($mm-colors, $color),$shade);
+
+    }@else {
+
+      @return map-get($mm-colors, $color);
+
+    }
+
+};
+
+//Loop through the gray list and generate the colors
+:root {
+  @each $color-name, $color in $mm-colors { // Colors Variable
+        // maps require a second loop
+        @if type-of($color) == "map" { //For the maps
+
+            @each $shade, $value in $color {
+                --mm-color-#{$color-name}-#{$shade}: #{$value};
+            }
+        } @elseif type-of($color) == "color" {
+          --mm-color-#{$color-name}: #{$color};
+        }
+
+    };
+}
+
+
+/*
+    Social Media Colors
+*/
+
+$mm-color-facebook: #1877f2;
+$mm-color-facebookold: #3b5998;
+$mm-color-twitter: #1da1f2;
+$mm-color-youtube: #ff0000;
+$mm-color-instagram: #c32aa3;
+$mm-color-google: #4285f4;
+$mm-color-whatsapp: #25d366;
